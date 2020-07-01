@@ -9,12 +9,10 @@
 /* Begin PBXBuildFile section */
 		C83D607124ACDA0400D1DC1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D607024ACDA0400D1DC1C /* AppDelegate.swift */; };
 		C83D607324ACDA0400D1DC1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D607224ACDA0400D1DC1C /* SceneDelegate.swift */; };
-		C83D607524ACDA0400D1DC1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D607424ACDA0400D1DC1C /* ViewController.swift */; };
 		C83D607824ACDA0400D1DC1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83D607624ACDA0400D1DC1C /* Main.storyboard */; };
 		C83D607A24ACDA0500D1DC1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83D607924ACDA0500D1DC1C /* Assets.xcassets */; };
 		C83D607D24ACDA0500D1DC1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83D607B24ACDA0500D1DC1C /* LaunchScreen.storyboard */; };
-		C83D608824ACDA0600D1DC1C /* vkAlissiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D608724ACDA0600D1DC1C /* vkAlissiaTests.swift */; };
-		C83D609324ACDA0600D1DC1C /* vkAlissiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D609224ACDA0600D1DC1C /* vkAlissiaUITests.swift */; };
+		C83D60A124ACDAF600D1DC1C /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D60A024ACDAF600D1DC1C /* LoginFormController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,17 +36,13 @@
 		C83D606D24ACDA0400D1DC1C /* vkAlissia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vkAlissia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83D607024ACDA0400D1DC1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C83D607224ACDA0400D1DC1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C83D607424ACDA0400D1DC1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C83D607724ACDA0400D1DC1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C83D607924ACDA0500D1DC1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C83D607C24ACDA0500D1DC1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C83D607E24ACDA0500D1DC1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C83D608324ACDA0600D1DC1C /* vkAlissiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vkAlissiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C83D608724ACDA0600D1DC1C /* vkAlissiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vkAlissiaTests.swift; sourceTree = "<group>"; };
-		C83D608924ACDA0600D1DC1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C83D608E24ACDA0600D1DC1C /* vkAlissiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vkAlissiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C83D609224ACDA0600D1DC1C /* vkAlissiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vkAlissiaUITests.swift; sourceTree = "<group>"; };
-		C83D609424ACDA0600D1DC1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C83D60A024ACDAF600D1DC1C /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				C83D606F24ACDA0400D1DC1C /* vkAlissia */,
-				C83D608624ACDA0600D1DC1C /* vkAlissiaTests */,
-				C83D609124ACDA0600D1DC1C /* vkAlissiaUITests */,
 				C83D606E24ACDA0400D1DC1C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,31 +93,13 @@
 			children = (
 				C83D607024ACDA0400D1DC1C /* AppDelegate.swift */,
 				C83D607224ACDA0400D1DC1C /* SceneDelegate.swift */,
-				C83D607424ACDA0400D1DC1C /* ViewController.swift */,
+				C83D60A024ACDAF600D1DC1C /* LoginFormController.swift */,
 				C83D607624ACDA0400D1DC1C /* Main.storyboard */,
 				C83D607924ACDA0500D1DC1C /* Assets.xcassets */,
 				C83D607B24ACDA0500D1DC1C /* LaunchScreen.storyboard */,
 				C83D607E24ACDA0500D1DC1C /* Info.plist */,
 			);
 			path = vkAlissia;
-			sourceTree = "<group>";
-		};
-		C83D608624ACDA0600D1DC1C /* vkAlissiaTests */ = {
-			isa = PBXGroup;
-			children = (
-				C83D608724ACDA0600D1DC1C /* vkAlissiaTests.swift */,
-				C83D608924ACDA0600D1DC1C /* Info.plist */,
-			);
-			path = vkAlissiaTests;
-			sourceTree = "<group>";
-		};
-		C83D609124ACDA0600D1DC1C /* vkAlissiaUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C83D609224ACDA0600D1DC1C /* vkAlissiaUITests.swift */,
-				C83D609424ACDA0600D1DC1C /* Info.plist */,
-			);
-			path = vkAlissiaUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C83D607524ACDA0400D1DC1C /* ViewController.swift in Sources */,
+				C83D60A124ACDAF600D1DC1C /* LoginFormController.swift in Sources */,
 				C83D607124ACDA0400D1DC1C /* AppDelegate.swift in Sources */,
 				C83D607324ACDA0400D1DC1C /* SceneDelegate.swift in Sources */,
 			);
@@ -269,7 +243,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C83D608824ACDA0600D1DC1C /* vkAlissiaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C83D609324ACDA0600D1DC1C /* vkAlissiaUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
