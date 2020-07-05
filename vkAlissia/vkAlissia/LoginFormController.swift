@@ -32,10 +32,6 @@ class LoginFormController: UIViewController {
                scrollView.addGestureRecognizer(tapGesture)
     }
     
-    @objc func hideKeyboard(){
-        scrollView.endEditing(true)
-    }
-    
     @objc func keyboardWillBeShown(notification: Notification) {
         let info = notification.userInfo! as NSDictionary
         let keyboardSize = (info.value(forKey: UIResponder.keyboardFrameEndUserInfoKey) as! NSValue).cgRectValue.size
@@ -51,6 +47,10 @@ class LoginFormController: UIViewController {
         scrollView.scrollIndicatorInsets = UIEdgeInsets.zero
     }
     
+    @objc func hideKeyboard(){
+        scrollView.endEditing(true)
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -60,15 +60,40 @@ class LoginFormController: UIViewController {
             UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    @IBAction func loginButtonPressed(_ sender: UIButton) {
-        guard let loginText = loginField.text else { return }
-        guard let passwordText = passwordField.text else { return }
+    private func checkLoginInfo() -> Bool {
+        guard let loginText = loginField.text else { return false }
+        guard let passwordText = passwordField.text else { return false }
         
         if loginText == "admin", passwordText == "12345" {
             print("Успешный вход")
+            return true
         } else {
-            print("Неверный логин или пароль")
+            print("Неверный логин и/или пароль")
+            return false
         }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "loginSeague" {
+            if checkLoginInfo() {
+                return true
+            } else {
+                showLoginError()
+                return false
+            }
+        }
+        return true
+    }
+    
+    private func showLoginError() {
+        let  alert = UIAlertController(title: "Ошибка!", message: "Неверный логин и/или пароль", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
     }
     
     
