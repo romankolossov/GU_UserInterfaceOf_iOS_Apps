@@ -128,7 +128,7 @@
             </objects>
             <point key="canvasLocation" x="845" y="-328"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Groups Root View Controller-->
         <scene sceneID="3fN-jO-HS4">
             <objects>
                 <tableViewController id="tFl-3O-ydI" sceneMemberID="viewController">
@@ -151,7 +151,7 @@
                             <outlet property="delegate" destination="tFl-3O-ydI" id="jLy-Vr-Lma"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="VNk-Oa-6KL">
+                    <navigationItem key="navigationItem" title="Groups Root View Controller" id="VNk-Oa-6KL">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="GeC-g5-2fh">
                             <connections>
                                 <segue destination="LCs-96-med" kind="show" id="jpr-pP-abw"/>
@@ -244,7 +244,7 @@
             </objects>
             <point key="canvasLocation" x="3496" y="-703"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Friends Root View Controller-->
         <scene sceneID="LQY-Sc-T3J">
             <objects>
                 <tableViewController id="Ynl-Fw-0PR" sceneMemberID="viewController">
@@ -270,7 +270,7 @@
                             <outlet property="delegate" destination="Ynl-Fw-0PR" id="Fuv-0f-njc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="UcU-UZ-Foj"/>
+                    <navigationItem key="navigationItem" title="Friends Root View Controller" id="UcU-UZ-Foj"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7l-zr-ude" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -281,7 +281,6 @@
             <objects>
                 <navigationController id="uy5-dr-Ei8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" systemItem="contacts" id="Y8i-AU-uTQ"/>
-                    <navigationItem key="navigationItem" id="JlM-JH-CZp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EeF-hc-68N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
