@@ -15,13 +15,6 @@ class LoginFormController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-        scrollView.addGestureRecognizer(tapGesture)
-    }
-    
-    @objc func hideKeyboard(){
-        scrollView.endEditing(true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,6 +27,13 @@ class LoginFormController: UIViewController {
         NotificationCenter.default.addObserver(self, selector:
             #selector(keyboardWillBeHiden(notification:)), name:
             UIResponder.keyboardWillHideNotification, object: nil)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+               scrollView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func hideKeyboard(){
+        scrollView.endEditing(true)
     }
     
     @objc func keyboardWillBeShown(notification: Notification) {
@@ -60,13 +60,11 @@ class LoginFormController: UIViewController {
             UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    
-    
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         guard let loginText = loginField.text else { return }
         guard let passwordText = passwordField.text else { return }
         
-        if loginText == "admin", passwordText == "123456" {
+        if loginText == "admin", passwordText == "12345" {
             print("Успешный вход")
         } else {
             print("Неверный логин или пароль")
