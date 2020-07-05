@@ -65,10 +65,10 @@ class LoginFormController: UIViewController {
         guard let passwordText = passwordField.text else { return false }
         
         if loginText == "admin", passwordText == "12345" {
-            print("Успешный вход")
+            // print("Успешный вход")
             return true
         } else {
-            print("Неверный логин и/или пароль")
+            // print("Неверный логин и/или пароль")
             return false
         }
     }
@@ -95,16 +95,4 @@ class LoginFormController: UIViewController {
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
