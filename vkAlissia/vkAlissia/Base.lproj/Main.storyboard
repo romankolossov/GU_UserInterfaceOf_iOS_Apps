@@ -49,7 +49,6 @@
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         <state key="normal" title="Войти"/>
                                         <connections>
-                                            <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BBB-E0-zh4"/>
                                             <segue destination="82A-PI-rCP" kind="presentation" identifier="loginSeague" modalPresentationStyle="fullScreen" id="U39-Ok-MOE"/>
                                         </connections>
                                     </button>
@@ -152,7 +151,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Groups Root View Controller" id="VNk-Oa-6KL">
-                        <barButtonItem key="rightBarButtonItem" title="Поиск групп" id="GeC-g5-2fh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="GeC-g5-2fh">
                             <connections>
                                 <segue destination="LCs-96-med" kind="show" id="jpr-pP-abw"/>
                             </connections>
@@ -167,7 +166,7 @@
         <scene sceneID="VB8-v9-v2k">
             <objects>
                 <navigationController id="oFz-HT-GO7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="VaI-fe-wdC"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="VaI-fe-wdC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kYR-0q-hoY">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
