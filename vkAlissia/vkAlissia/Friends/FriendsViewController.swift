@@ -11,20 +11,20 @@ import UIKit
 class FriendsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    var friend = [
-        FriendData(name: "Алиска0"),
-        FriendData(name: "Барсик1"),
-        FriendData(name: "Васьк2"),
-        FriendData(name: "Стеша3"),
-        FriendData(name: "Пушок4"),
-        FriendData(name: "Фекла5"),
-        FriendData(name: "Маруська6"),
-        FriendData(name: "Мурка7"),
-        FriendData(name: "Счастливчик8"),
-        FriendData(name: "Забияка9"),
-        FriendData(name: "Борька10"),
-        FriendData(name: "Принц11"),
-        FriendData(name: "Софочка12"),
+    var friends: Array<FriendData> = [
+        FriendData(friendName: "Алиска0"),
+        FriendData(friendName: "Барсик1"),
+        FriendData(friendName: "Васьк2"),
+        FriendData(friendName: "Стеша3"),
+        FriendData(friendName: "Пушок4"),
+        FriendData(friendName: "Фекла5"),
+        FriendData(friendName: "Маруська6"),
+        FriendData(friendName: "Мурка7"),
+        FriendData(friendName: "Счастливчик8"),
+        FriendData(friendName: "Забияка9"),
+        FriendData(friendName: "Борька10"),
+        FriendData(friendName: "Принц11"),
+        FriendData(friendName: "Софочка12"),
     ]
     
     override func viewDidLoad() {
@@ -32,28 +32,34 @@ class FriendsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
-    
 }
 
+// MARK: UITableViewDataSource
 extension FriendsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        friend.count
+        friends.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell") as? FriendCell else { fatalError() }
-//
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as? FriendCell else { fatalError() }
         
-        let data = friend[indexPath.row]
-        cell.nameLabel.text = String(data.name)
+        let data = friends[indexPath.row]
+        cell.nameLabel.text = data.friendName
         //cell.friendImageView = UIImageView(image: data.friendImage)
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            friends.remove(at: indexPath.row)
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 }
 
+// MARK: UITableViewDelegate
 extension FriendsViewController: UITableViewDelegate {
     
 }

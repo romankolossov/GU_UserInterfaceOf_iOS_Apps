@@ -8,7 +8,11 @@
 
 import UIKit
 
-struct FriendData {
-    let name: String
+class FriendData {
+    let friendName: String
 //    var friendImage: UIImage
+    
+    init(friendName: String) {
+        self.friendName = friendName
+    }
 }
