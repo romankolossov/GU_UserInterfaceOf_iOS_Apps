@@ -169,27 +169,38 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendCell" id="lIt-33-phN" customClass="FriendCell" customModule="vkAlissia" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendCell" rowHeight="128.5" id="lIt-33-phN" customClass="FriendCell" customModule="vkAlissia" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="128.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lIt-33-phN" id="yIU-SQ-uAk" customClass="FriendCell" customModule="vkAlissia" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="128.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF6-f5-pAx">
-                                                    <rect key="frame" x="8" y="1.5" width="398" height="41"/>
+                                                    <rect key="frame" x="104.5" y="44" width="301.5" height="41"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Alissia_face" translatesAutoresizingMaskIntoConstraints="NO" id="lHh-cs-RYW">
+                                                    <rect key="frame" x="20" y="0.0" width="64.5" height="128.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="Re9-TP-6zF"/>
+                                                        <constraint firstAttribute="width" secondItem="lHh-cs-RYW" secondAttribute="height" multiplier="1:2" id="nib-bC-1GN"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="uF6-f5-pAx" firstAttribute="centerX" secondItem="yIU-SQ-uAk" secondAttribute="centerX" id="QB6-O6-aCA"/>
-                                                <constraint firstItem="uF6-f5-pAx" firstAttribute="centerY" secondItem="yIU-SQ-uAk" secondAttribute="centerY" id="fBq-i1-SRL"/>
+                                                <constraint firstItem="lHh-cs-RYW" firstAttribute="height" secondItem="yIU-SQ-uAk" secondAttribute="height" id="84J-cb-Cr5"/>
+                                                <constraint firstItem="uF6-f5-pAx" firstAttribute="centerY" secondItem="lHh-cs-RYW" secondAttribute="centerY" id="AMf-n0-GSN"/>
+                                                <constraint firstItem="lHh-cs-RYW" firstAttribute="centerY" secondItem="yIU-SQ-uAk" secondAttribute="centerY" id="LAc-cA-pNv"/>
+                                                <constraint firstItem="uF6-f5-pAx" firstAttribute="leading" secondItem="lHh-cs-RYW" secondAttribute="trailing" constant="20" id="RBI-rw-mjK"/>
+                                                <constraint firstItem="lHh-cs-RYW" firstAttribute="leading" secondItem="yIU-SQ-uAk" secondAttribute="leading" constant="20" id="lok-65-V26"/>
                                                 <constraint firstAttribute="trailing" secondItem="uF6-f5-pAx" secondAttribute="trailing" constant="8" id="wCC-Du-616"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="friendImageView" destination="lHh-cs-RYW" id="Brv-Nd-265"/>
                                             <outlet property="nameLabel" destination="uF6-f5-pAx" id="b5b-Cb-f5d"/>
                                         </connections>
                                     </tableViewCell>

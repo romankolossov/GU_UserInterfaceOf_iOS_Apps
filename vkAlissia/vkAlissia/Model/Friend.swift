@@ -10,9 +10,10 @@ import UIKit
 
 class FriendData {
     let friendName: String
-//    var friendImage: UIImage
+    var friendImage: UIImage
     
-    init(friendName: String) {
+    init(friendName: String, friendImage: UIImage) {
         self.friendName = friendName
+        self.friendImage = friendImage
     }
 }
