@@ -17,6 +17,10 @@ class CertainFriendViewController: UIViewController {
         super.viewDidLoad()
         collectiovView.dataSource = self
         collectiovView.delegate = self
+        
+        if let layout = collectiovView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.itemSize = CGSize(width: 100, height: 100)
+        }
     }
 }
 

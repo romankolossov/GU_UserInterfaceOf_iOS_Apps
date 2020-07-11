@@ -15,5 +15,8 @@ class CertainFriendCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        backView.layer.cornerRadius = 10
+        backView.layer.borderColor = UIColor.green.cgColor
+        backView.layer.borderWidth = 3
     }
 }
