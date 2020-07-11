@@ -8,7 +8,12 @@
 
 import UIKit
 
-struct GroupData {
-    let name: String
+class GroupData {
+    let groupName: String
     var groupImage: UIImage
+    
+    init(groupName: String, groupImage: UIImage) {
+        self.groupName = groupName
+        self.groupImage = groupImage
+    }
 }

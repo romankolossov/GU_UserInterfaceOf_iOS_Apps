@@ -33,9 +33,14 @@ class FriendsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        super.prepare(for: segue, sender: sender)
+//        //destination.friendName =
+//    }
 }
 
-// MARK: UITableViewDataSource
+// MARK: - UITableViewDataSource
 extension FriendsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         friends.count
@@ -47,6 +52,14 @@ extension FriendsViewController: UITableViewDataSource {
         let data = friends[indexPath.row]
         cell.nameLabel.text = data.friendName
         cell.friendImageView.image = data.friendImage
+        
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            super.prepare(for: segue, sender: sender)
+            if let destination = segue.destination as? CertainFriendViewController {
+                destination.friendName = data.friendName
+                destination.friendImage = data.friendImage
+            }
+        }
         
         return cell
     }
@@ -60,7 +73,7 @@ extension FriendsViewController: UITableViewDataSource {
     }
 }
 
-// MARK: UITableViewDelegate
+// MARK: - UITableViewDelegate
 extension FriendsViewController: UITableViewDelegate {
     
 }
