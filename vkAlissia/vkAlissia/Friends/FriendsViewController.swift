@@ -37,10 +37,10 @@ class FriendsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         if let destination = segue.destination as? CertainFriendViewController {
-            let indexPath = tableView.indexPathForSelectedRow
-            let data = friends[indexPath!.row]
-            destination.friendName = data.friendName
-            destination.friendImage = data.friendImage
+            guard let cell = sender as? FriendCell else { return }
+            
+            destination.friendName = cell.nameLabel.text
+            destination.friendImage = cell.friendImageView.image
         }
     }
 }
