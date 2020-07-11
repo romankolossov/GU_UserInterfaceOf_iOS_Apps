@@ -19,7 +19,7 @@ class CertainFriendViewController: UIViewController {
         collectiovView.delegate = self
         
         if let layout = collectiovView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.itemSize = CGSize(width: 100, height: 100)
+            layout.itemSize = CGSize(width: 200, height: 200)
         }
     }
 }
