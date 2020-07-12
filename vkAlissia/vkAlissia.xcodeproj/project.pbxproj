@@ -13,6 +13,7 @@
 		C83D607A24ACDA0500D1DC1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83D607924ACDA0500D1DC1C /* Assets.xcassets */; };
 		C83D607D24ACDA0500D1DC1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83D607B24ACDA0500D1DC1C /* LaunchScreen.storyboard */; };
 		C83D60A124ACDAF600D1DC1C /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D60A024ACDAF600D1DC1C /* LoginFormController.swift */; };
+		C84AAD7C24BB4EC700AD0084 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84AAD7B24BB4EC700AD0084 /* GradientView.swift */; };
 		C88E7F7F24B79967002D72AE /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88E7F7E24B79967002D72AE /* FriendCell.swift */; };
 		C88E7F8224B79E61002D72AE /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88E7F8124B79E61002D72AE /* Friend.swift */; };
 		C88E7F8424B79E91002D72AE /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88E7F8324B79E91002D72AE /* Group.swift */; };
@@ -51,6 +52,7 @@
 		C83D608324ACDA0600D1DC1C /* vkAlissiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vkAlissiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83D608E24ACDA0600D1DC1C /* vkAlissiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vkAlissiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83D60A024ACDAF600D1DC1C /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
+		C84AAD7B24BB4EC700AD0084 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		C88E7F7E24B79967002D72AE /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		C88E7F8124B79E61002D72AE /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		C88E7F8324B79E91002D72AE /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				C83D60A024ACDAF600D1DC1C /* LoginFormController.swift */,
+				C84AAD7B24BB4EC700AD0084 /* GradientView.swift */,
 				C83D607624ACDA0400D1DC1C /* Main.storyboard */,
 				C83D607924ACDA0500D1DC1C /* Assets.xcassets */,
 				C88E7F8524B7CE91002D72AE /* Aditions */,
@@ -307,6 +310,7 @@
 			files = (
 				C8A712EB24B7901D00C723FE /* CertainFriendViewController.swift in Sources */,
 				C8A712E724B78E3B00C723FE /* GroupsViewController.swift in Sources */,
+				C84AAD7C24BB4EC700AD0084 /* GradientView.swift in Sources */,
 				C83D60A124ACDAF600D1DC1C /* LoginFormController.swift in Sources */,
 				C88E7F8424B79E91002D72AE /* Group.swift in Sources */,
 				C88E7F7F24B79967002D72AE /* FriendCell.swift in Sources */,
