@@ -204,6 +204,16 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" id="UsN-uJ-JOS" customClass="ShadowView" customModule="vkAlissia" customModuleProvider="target">
+                                                    <rect key="frame" x="315" y="5" width="78" height="78"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                            <real key="value" value="40"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Alissia_face" id="lHh-cs-RYW">
                                                     <rect key="frame" x="315" y="5" width="78" height="78"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -216,9 +226,13 @@
                                                 <constraint firstAttribute="trailing" secondItem="lHh-cs-RYW" secondAttribute="trailing" constant="21" id="4I3-84-QXW"/>
                                                 <constraint firstItem="uF6-f5-pAx" firstAttribute="leading" secondItem="yIU-SQ-uAk" secondAttribute="leading" constant="21" id="BsD-Vm-hl3"/>
                                                 <constraint firstItem="uF6-f5-pAx" firstAttribute="centerY" secondItem="lHh-cs-RYW" secondAttribute="centerY" id="M5b-rP-6B1"/>
+                                                <constraint firstItem="UsN-uJ-JOS" firstAttribute="centerY" secondItem="lHh-cs-RYW" secondAttribute="centerY" id="Q48-PJ-cdT"/>
                                                 <constraint firstItem="lHh-cs-RYW" firstAttribute="centerY" secondItem="yIU-SQ-uAk" secondAttribute="centerY" id="XhN-et-oNX"/>
                                                 <constraint firstItem="lHh-cs-RYW" firstAttribute="leading" secondItem="uF6-f5-pAx" secondAttribute="trailing" constant="11" id="gtx-1p-3ic"/>
                                                 <constraint firstItem="lHh-cs-RYW" firstAttribute="height" secondItem="yIU-SQ-uAk" secondAttribute="height" multiplier="0.888" id="nCy-oD-366"/>
+                                                <constraint firstItem="UsN-uJ-JOS" firstAttribute="width" secondItem="lHh-cs-RYW" secondAttribute="width" id="pDO-6p-ZId"/>
+                                                <constraint firstItem="UsN-uJ-JOS" firstAttribute="height" secondItem="lHh-cs-RYW" secondAttribute="height" id="sXO-Xj-F1s"/>
+                                                <constraint firstItem="UsN-uJ-JOS" firstAttribute="centerX" secondItem="lHh-cs-RYW" secondAttribute="centerX" id="udc-xf-KO2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
