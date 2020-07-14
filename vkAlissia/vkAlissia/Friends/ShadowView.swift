@@ -12,7 +12,6 @@ class ShadowView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         self.drawShadow()
     }
     
