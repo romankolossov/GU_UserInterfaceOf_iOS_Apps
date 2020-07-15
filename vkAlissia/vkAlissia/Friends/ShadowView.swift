@@ -16,10 +16,11 @@ class ShadowView: UIView {
     }
     
     func drawShadow() {
-        self.layer.cornerRadius = self.frame.size.height / 2
+        self.layer.cornerRadius = self.bounds.height / 2
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = 0.8
         self.layer.shadowRadius = 8
         self.layer.shadowOffset = CGSize.zero
+        self.layer.shadowPath = UIBezierPath(ovalIn: self.bounds).cgPath
     }
 }

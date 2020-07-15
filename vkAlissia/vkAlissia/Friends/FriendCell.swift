@@ -15,9 +15,9 @@ class FriendCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        friendImageView?.layer.cornerRadius = CGFloat(((friendImageView?.frame.size.height) ?? 0) / 2)
+        friendImageView?.layer.cornerRadius = CGFloat(((friendImageView?.bounds.height) ?? 0) / 2)
         friendImageView?.contentMode = .scaleAspectFill
-        //friendImageView?.layer.masksToBounds = true
+        friendImageView?.clipsToBounds = true
     }
     
     override func prepareForReuse() {
