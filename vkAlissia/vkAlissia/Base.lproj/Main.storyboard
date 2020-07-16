@@ -204,7 +204,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" id="UsN-uJ-JOS" customClass="ShadowView" customModule="vkAlissia" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" id="UsN-uJ-JOS">
                                                     <rect key="frame" x="322" y="4.5" width="71" height="71.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -238,6 +238,7 @@
                                         <connections>
                                             <outlet property="friendImageView" destination="lHh-cs-RYW" id="Brv-Nd-265"/>
                                             <outlet property="nameLabel" destination="uF6-f5-pAx" id="b5b-Cb-f5d"/>
+                                            <outlet property="shadowView" destination="UsN-uJ-JOS" id="w6F-BU-C2z"/>
                                             <segue destination="OiO-Q9-Vtf" kind="show" identifier="certainFriendSegue" id="Qnd-hw-G5F"/>
                                         </connections>
                                     </tableViewCell>
