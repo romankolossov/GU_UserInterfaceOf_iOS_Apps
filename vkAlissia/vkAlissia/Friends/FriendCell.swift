@@ -12,6 +12,7 @@ class FriendCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var friendImageView: UIImageView!
     @IBOutlet weak var shadowView: UIView!
+    var favoriteImages: [UIImage] = []
     
     override func prepareForReuse() {
         super.prepareForReuse()

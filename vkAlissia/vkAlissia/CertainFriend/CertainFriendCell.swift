@@ -17,6 +17,6 @@ class CertainFriendCell: UICollectionViewCell {
         super.awakeFromNib()
         backView.layer.cornerRadius = 10
         backView.layer.borderColor = UIColor.green.cgColor
-        backView.layer.borderWidth = 3
+        backView.layer.borderWidth = 1
     }
 }

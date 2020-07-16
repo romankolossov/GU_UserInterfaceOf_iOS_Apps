@@ -69,11 +69,10 @@ class FriendsViewController: UIViewController {
         super.prepare(for: segue, sender: sender)
         if let destination = segue.destination as? CertainFriendViewController {
             guard let cell = sender as? FriendCell else { return }
-            //guard  let friend = sections[sectionTitles[indexPath.section]]? [indexPath.row] else { fatalError() }
             
             destination.friendName = cell.nameLabel.text
             destination.friendImage = cell.friendImageView.image
-            //destination.favoriteImages =
+            destination.favoriteImages = cell.favoriteImages
         }
     }
 }
@@ -102,6 +101,7 @@ extension FriendsViewController: UITableViewDataSource {
         
         cell.nameLabel.text = friend.friendName
         cell.friendImageView.image = friend.friendImage
+        cell.favoriteImages = friend.favorireImages
         
         return cell
     }
