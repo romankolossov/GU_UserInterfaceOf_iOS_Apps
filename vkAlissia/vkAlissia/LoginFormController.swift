@@ -15,6 +15,12 @@ class LoginFormController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Login Form VC did load")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("Login Form VC did disapear")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,10 +38,6 @@ class LoginFormController: UIViewController {
                scrollView.addGestureRecognizer(tapGesture)
     }
     
-    @objc func hideKeyboard(){
-        scrollView.endEditing(true)
-    }
-    
     @objc func keyboardWillBeShown(notification: Notification) {
         let info = notification.userInfo! as NSDictionary
         let keyboardSize = (info.value(forKey: UIResponder.keyboardFrameEndUserInfoKey) as! NSValue).cgRectValue.size
@@ -51,6 +53,10 @@ class LoginFormController: UIViewController {
         scrollView.scrollIndicatorInsets = UIEdgeInsets.zero
     }
     
+    @objc func hideKeyboard(){
+        scrollView.endEditing(true)
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -60,26 +66,34 @@ class LoginFormController: UIViewController {
             UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    @IBAction func loginButtonPressed(_ sender: UIButton) {
-        guard let loginText = loginField.text else { return }
-        guard let passwordText = passwordField.text else { return }
-        
-        if loginText == "admin", passwordText == "12345" {
-            print("Успешный вход")
-        } else {
-            print("Неверный логин или пароль")
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "loginSeague" {
+            if checkLoginInfo() {
+                return true
+            } else {
+                showLoginError()
+                return false
+            }
         }
+        return true
     }
     
+    private func checkLoginInfo() -> Bool {
+           guard let loginText = loginField.text else { return false }
+           guard let passwordText = passwordField.text else { return false }
+           
+           if loginText == "admin", passwordText == "12345" {
+               return true
+           } else {
+               return false
+           }
+       }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func showLoginError() {
+        let  alert = UIAlertController(title: "Ошибка", message: "Неверный логин и/или пароль", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
     }
-    */
-
 }
