@@ -13,16 +13,6 @@ class LoginFormController: UIViewController {
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print("Login Form VC did load")
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        print("Login Form VC did disapear")
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -35,7 +25,7 @@ class LoginFormController: UIViewController {
             UIResponder.keyboardWillHideNotification, object: nil)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-               scrollView.addGestureRecognizer(tapGesture)
+        scrollView.addGestureRecognizer(tapGesture)
     }
     
     @objc func keyboardWillBeShown(notification: Notification) {
@@ -67,7 +57,7 @@ class LoginFormController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if identifier == "loginSeague" {
+        if identifier == "loginSegue" {
             if checkLoginInfo() {
                 return true
             } else {
@@ -82,7 +72,7 @@ class LoginFormController: UIViewController {
            guard let loginText = loginField.text else { return false }
            guard let passwordText = passwordField.text else { return false }
            
-           if loginText == "admin", passwordText == "12345" {
+           if loginText == "", passwordText == "" {
                return true
            } else {
                return false
