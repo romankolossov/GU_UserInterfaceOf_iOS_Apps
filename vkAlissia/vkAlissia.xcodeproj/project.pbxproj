@@ -22,6 +22,7 @@
 		C8A712E924B78E6F00C723FE /* MyGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A712E824B78E6F00C723FE /* MyGroupsViewController.swift */; };
 		C8A712EB24B7901D00C723FE /* CertainFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A712EA24B7901D00C723FE /* CertainFriendViewController.swift */; };
 		C8A712EE24B790A200C723FE /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A712ED24B790A200C723FE /* FriendsViewController.swift */; };
+		C8B36EA224C2CBD400E59252 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B36EA124C2CBD400E59252 /* LikeControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		C8A712E824B78E6F00C723FE /* MyGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsViewController.swift; sourceTree = "<group>"; };
 		C8A712EA24B7901D00C723FE /* CertainFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertainFriendViewController.swift; sourceTree = "<group>"; };
 		C8A712ED24B790A200C723FE /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		C8B36EA124C2CBD400E59252 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			children = (
 				C8A712EA24B7901D00C723FE /* CertainFriendViewController.swift */,
 				C88E7F8624B94FA4002D72AE /* CertainFriendCell.swift */,
+				C8B36EA124C2CBD400E59252 /* LikeControl.swift */,
 			);
 			path = CertainFriend;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				C88E7F8724B94FA4002D72AE /* CertainFriendCell.swift in Sources */,
 				C83D607124ACDA0400D1DC1C /* AppDelegate.swift in Sources */,
 				C83D607324ACDA0400D1DC1C /* SceneDelegate.swift in Sources */,
+				C8B36EA224C2CBD400E59252 /* LikeControl.swift in Sources */,
 				C88E7F8224B79E61002D72AE /* Friend.swift in Sources */,
 				C8A712E924B78E6F00C723FE /* MyGroupsViewController.swift in Sources */,
 				C8A712EE24B790A200C723FE /* FriendsViewController.swift in Sources */,
