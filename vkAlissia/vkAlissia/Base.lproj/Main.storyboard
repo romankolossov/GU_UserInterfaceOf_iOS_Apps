@@ -263,10 +263,10 @@
             </objects>
             <point key="canvasLocation" x="2550.7246376811595" y="-703.125"/>
         </scene>
-        <!--Certain Friend View Controller-->
+        <!--Particular Friend View Controller-->
         <scene sceneID="0Yk-OQ-4ne">
             <objects>
-                <viewController id="OiO-Q9-Vtf" customClass="CertainFriendViewController" customModule="vkAlissia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OiO-Q9-Vtf" customClass="ParticularFriendViewController" customModule="vkAlissia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBl-jY-NCN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -281,7 +281,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CertainFriendCell" id="1xJ-4F-Saz" customClass="CertainFriendCell" customModule="vkAlissia" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ParticularFriendCell" id="1xJ-4F-Saz" customClass="ParticularFriendCell" customModule="vkAlissia" customModuleProvider="target">
                                         <rect key="frame" x="70.5" y="0.0" width="273" height="278"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SS1-Io-OMO">

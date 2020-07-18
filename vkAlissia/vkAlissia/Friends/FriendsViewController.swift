@@ -67,7 +67,7 @@ class FriendsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        if let destination = segue.destination as? CertainFriendViewController {
+        if let destination = segue.destination as? ParticularFriendViewController {
             guard let cell = sender as? FriendCell else { return }
             
             destination.friendName = cell.nameLabel.text
