@@ -9,10 +9,11 @@
 import UIKit
 
 class MyGroupCell: UITableViewCell {
+    @IBOutlet weak var myGroupNameLabel: UILabel!
+    @IBOutlet weak var myGroupAvatarView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

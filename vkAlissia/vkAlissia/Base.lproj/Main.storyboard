@@ -307,7 +307,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="friendImageView" destination="lHh-cs-RYW" id="Brv-Nd-265"/>
+                                            <outlet property="friendAvatarView" destination="lHh-cs-RYW" id="Brv-Nd-265"/>
                                             <outlet property="nameLabel" destination="uF6-f5-pAx" id="b5b-Cb-f5d"/>
                                             <outlet property="shadowView" destination="UsN-uJ-JOS" id="w6F-BU-C2z"/>
                                             <segue destination="OiO-Q9-Vtf" kind="show" identifier="certainFriendSegue" id="Qnd-hw-G5F"/>

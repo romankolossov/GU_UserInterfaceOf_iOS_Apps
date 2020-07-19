@@ -11,7 +11,7 @@ import UIKit
 class ParticularFriendViewController: UIViewController {
     @IBOutlet weak var collectiovView: UICollectionView!
     var friendName: String?
-    var friendImage: UIImage?
+    var friendAvatar: UIImage?
     var favoriteImages: [UIImage] = []
  
     override func viewDidLoad() {

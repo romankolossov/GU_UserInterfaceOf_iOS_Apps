@@ -10,7 +10,7 @@ import UIKit
 
 class FriendCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var friendImageView: UIImageView!
+    @IBOutlet weak var friendAvatarView: UIImageView!
     @IBOutlet weak var shadowView: UIView!
     var favoriteImages: [UIImage] = []
     
@@ -28,8 +28,8 @@ class FriendCell: UITableViewCell {
         shadowView?.layer.shadowOffset = CGSize.zero
         shadowView?.layer.shadowPath = UIBezierPath(ovalIn: shadowView.bounds).cgPath
         
-        friendImageView?.layer.cornerRadius = friendImageView.bounds.height / 2
-        friendImageView?.contentMode = .scaleAspectFill
-        friendImageView?.clipsToBounds = true
+        friendAvatarView?.layer.cornerRadius = friendAvatarView.bounds.height / 2
+        friendAvatarView?.contentMode = .scaleAspectFill
+        friendAvatarView?.clipsToBounds = true
     }
 }

@@ -40,7 +40,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="groupAvatarView" destination="Pfr-Ru-CH6" id="h8E-Ou-P6Q"/>
-                <outlet property="groupLabel" destination="gTf-F5-gCM" id="UeL-dC-L0y"/>
+                <outlet property="groupNameLabel" destination="gTf-F5-gCM" id="UeL-dC-L0y"/>
             </connections>
             <point key="canvasLocation" x="163.768115942029" y="55.580357142857139"/>
         </tableViewCell>

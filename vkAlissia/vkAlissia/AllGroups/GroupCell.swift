@@ -9,13 +9,11 @@
 import UIKit
 
 class GroupCell: UITableViewCell {
-    @IBOutlet weak var groupLabel: UILabel!
+    @IBOutlet weak var groupNameLabel: UILabel!
     @IBOutlet weak var groupAvatarView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-//        groupLabel.translatesAutoresizingMaskIntoConstraints = true
-//        groupAvatarView.translatesAutoresizingMaskIntoConstraints = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

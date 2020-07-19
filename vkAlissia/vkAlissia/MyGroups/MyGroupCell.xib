@@ -38,6 +38,10 @@
                     <constraint firstItem="qfL-lG-1Ml" firstAttribute="leading" secondItem="1Ns-qe-ExR" secondAttribute="trailing" constant="68" id="sa3-Yi-u5n"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="myGroupAvatarView" destination="qfL-lG-1Ml" id="wQ1-EV-hR7"/>
+                <outlet property="myGroupNameLabel" destination="1Ns-qe-ExR" id="AsU-Cc-2mr"/>
+            </connections>
             <point key="canvasLocation" x="37.681159420289859" y="51.5625"/>
         </tableViewCell>
     </objects>
