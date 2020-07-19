@@ -156,10 +156,81 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="bep-y5-rAR" kind="relationship" relationship="rootViewController" id="vPK-eT-Urg"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aqz-MN-FpV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1790" y="-26"/>
+        </scene>
+        <!--My Groups-->
+        <scene sceneID="LhT-Ug-vJT">
+            <objects>
+                <viewController id="bep-y5-rAR" customClass="MyGroupsViewController" customModule="vkAlissia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4vT-wf-zWg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2H5-Cf-w8p">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Yja-az-uic" firstAttribute="bottom" secondItem="2H5-Cf-w8p" secondAttribute="bottom" id="GVb-zl-2d7"/>
+                            <constraint firstItem="2H5-Cf-w8p" firstAttribute="top" secondItem="Yja-az-uic" secondAttribute="top" id="kjy-AV-QGH"/>
+                            <constraint firstItem="Yja-az-uic" firstAttribute="trailing" secondItem="2H5-Cf-w8p" secondAttribute="trailing" id="sEm-XA-eaU"/>
+                            <constraint firstItem="2H5-Cf-w8p" firstAttribute="leading" secondItem="Yja-az-uic" secondAttribute="leading" id="wPi-jt-SQ0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yja-az-uic"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Groups" id="VuQ-sd-SV5" userLabel="Navigation Item">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="M83-Ct-DCr">
+                            <connections>
+                                <action selector="addGroupBarButtonItem:" destination="bep-y5-rAR" id="SjX-rC-STP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="2H5-Cf-w8p" id="vjN-Uw-Jjz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NQq-SE-uiB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2551" y="-26"/>
+        </scene>
+        <!--All Groups-->
+        <scene sceneID="Jj3-hj-XAZ">
+            <objects>
+                <viewController storyboardIdentifier="AllGroupsViewController" id="X6Q-T4-EZd" customClass="AllGroupsViewController" customModule="vkAlissia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nTo-8K-Oda">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Aou-oP-BvW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tKA-wY-edm" firstAttribute="trailing" secondItem="Aou-oP-BvW" secondAttribute="trailing" id="Icd-km-5N1"/>
+                            <constraint firstItem="Aou-oP-BvW" firstAttribute="top" secondItem="tKA-wY-edm" secondAttribute="top" id="Nod-iN-a13"/>
+                            <constraint firstItem="tKA-wY-edm" firstAttribute="bottom" secondItem="Aou-oP-BvW" secondAttribute="bottom" id="fvq-3Y-G4Y"/>
+                            <constraint firstItem="Aou-oP-BvW" firstAttribute="leading" secondItem="tKA-wY-edm" secondAttribute="leading" id="hbE-a4-AYh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tKA-wY-edm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="All Groups" id="i1h-zB-Ybb"/>
+                    <connections>
+                        <outlet property="tableView" destination="Aou-oP-BvW" id="9Yk-sl-pMb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="glU-ua-mRP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3351" y="-26"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="d3p-eG-OlL">
@@ -178,7 +249,7 @@
             </objects>
             <point key="canvasLocation" x="1791" y="-703"/>
         </scene>
-        <!--Friends View Controller-->
+        <!--Friends-->
         <scene sceneID="HN1-cb-6yt">
             <objects>
                 <viewController id="zgR-0j-AMj" customClass="FriendsViewController" customModule="vkAlissia" customModuleProvider="target" sceneMemberID="viewController">
@@ -254,7 +325,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Iyw-va-wfi"/>
                     </view>
-                    <navigationItem key="navigationItem" id="HWK-Yi-tW3"/>
+                    <navigationItem key="navigationItem" title="Friends" id="HWK-Yi-tW3"/>
                     <connections>
                         <outlet property="tableView" destination="CCU-BQ-dZG" id="rlK-XF-ln5"/>
                     </connections>

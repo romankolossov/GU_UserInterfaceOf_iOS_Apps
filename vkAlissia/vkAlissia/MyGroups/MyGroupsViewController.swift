@@ -9,22 +9,38 @@
 import UIKit
 
 class MyGroupsViewController: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        tableView.register(UINib(nibName: "MyGroupCell", bundle: Bundle.main), forCellReuseIdentifier: "MyGroupCell")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func addGroupBarButtonItem(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "AllGroupsViewController") as AllGroupsViewController
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
-    */
+}
 
+// MARK: - UITableViewDataSource
+extension MyGroupsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyGroupCell", for: indexPath) as? MyGroupCell else { fatalError() }
+        
+        return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension MyGroupsViewController: UITableViewDelegate {
+    
 }

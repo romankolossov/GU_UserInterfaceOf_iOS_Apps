@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyGroupCell" rowHeight="88" id="VJD-aq-Aw3" customClass="MyGroupCell" customModule="vkAlissia" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="419" height="124"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VJD-aq-Aw3" id="VVQ-aC-FE3">
+                <rect key="frame" x="0.0" y="0.0" width="419" height="124"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ns-qe-ExR">
+                        <rect key="frame" x="11" y="50" width="205" height="24"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BMW" translatesAutoresizingMaskIntoConstraints="NO" id="qfL-lG-1Ml">
+                        <rect key="frame" x="284" y="0.0" width="124" height="124"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="qfL-lG-1Ml" secondAttribute="height" multiplier="1:1" id="Axw-t5-BOb"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qfL-lG-1Ml" firstAttribute="centerY" secondItem="1Ns-qe-ExR" secondAttribute="centerY" id="2Fo-A8-XG9"/>
+                    <constraint firstItem="qfL-lG-1Ml" firstAttribute="height" secondItem="VVQ-aC-FE3" secondAttribute="height" id="QUV-z5-b8o"/>
+                    <constraint firstItem="1Ns-qe-ExR" firstAttribute="leading" secondItem="VVQ-aC-FE3" secondAttribute="leading" constant="11" id="q1d-VG-IOT"/>
+                    <constraint firstItem="qfL-lG-1Ml" firstAttribute="leading" secondItem="1Ns-qe-ExR" secondAttribute="trailing" constant="68" id="xBD-QT-nUx"/>
+                    <constraint firstAttribute="trailing" secondItem="qfL-lG-1Ml" secondAttribute="trailing" constant="11" id="yhK-xg-OGN"/>
+                    <constraint firstItem="1Ns-qe-ExR" firstAttribute="centerY" secondItem="VVQ-aC-FE3" secondAttribute="centerY" id="yrI-T6-XQW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="34.057971014492757" y="63.616071428571423"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="BMW" width="800" height="600"/>
+    </resources>
+</document>
