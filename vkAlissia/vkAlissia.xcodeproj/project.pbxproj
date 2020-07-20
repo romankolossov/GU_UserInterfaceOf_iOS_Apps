@@ -27,6 +27,9 @@
 		C8B36EA224C2CBD400E59252 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B36EA124C2CBD400E59252 /* LikeControl.swift */; };
 		C8EAB0C124C46F1E0054E37A /* MyGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EAB0C024C46F1E0054E37A /* MyGroupCell.swift */; };
 		C8EAB0C324C46FB20054E37A /* MyGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8EAB0C224C46FB20054E37A /* MyGroupCell.xib */; };
+		C8EAB0C824C60FD50054E37A /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EAB0C724C60FD50054E37A /* NewsViewController.swift */; };
+		C8EAB0CB24C6102F0054E37A /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EAB0C924C6102F0054E37A /* NewsCell.swift */; };
+		C8EAB0CE24C6121A0054E37A /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8EAB0CD24C6121A0054E37A /* NewsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		C8B36EA124C2CBD400E59252 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
 		C8EAB0C024C46F1E0054E37A /* MyGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupCell.swift; sourceTree = "<group>"; };
 		C8EAB0C224C46FB20054E37A /* MyGroupCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyGroupCell.xib; sourceTree = "<group>"; };
+		C8EAB0C724C60FD50054E37A /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		C8EAB0C924C6102F0054E37A /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		C8EAB0CD24C6121A0054E37A /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,7 @@
 				C8A712E324B78A4200C723FE /* ParticularFriend */,
 				C8A712E524B78BA000C723FE /* MyGroups */,
 				C8A712E424B78B7E00C723FE /* AllGroups */,
+				C8EAB0C424C60F070054E37A /* News */,
 				C88E7F8524B7CE91002D72AE /* SupportingFiles */,
 				C83D607E24ACDA0500D1DC1C /* Info.plist */,
 			);
@@ -198,6 +205,16 @@
 				C88E7F7E24B79967002D72AE /* FriendCell.swift */,
 			);
 			path = Friends;
+			sourceTree = "<group>";
+		};
+		C8EAB0C424C60F070054E37A /* News */ = {
+			isa = PBXGroup;
+			children = (
+				C8EAB0C724C60FD50054E37A /* NewsViewController.swift */,
+				C8EAB0C924C6102F0054E37A /* NewsCell.swift */,
+				C8EAB0CD24C6121A0054E37A /* NewsCell.xib */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +325,7 @@
 				C83D607A24ACDA0500D1DC1C /* Assets.xcassets in Resources */,
 				C83D607824ACDA0400D1DC1C /* Main.storyboard in Resources */,
 				C87F752F24C3F16C004620E7 /* GroupCell.xib in Resources */,
+				C8EAB0CE24C6121A0054E37A /* NewsCell.xib in Resources */,
 				C8EAB0C324C46FB20054E37A /* MyGroupCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,7 +365,9 @@
 				C8B36EA224C2CBD400E59252 /* LikeControl.swift in Sources */,
 				C88E7F8224B79E61002D72AE /* Friend.swift in Sources */,
 				C8A712E924B78E6F00C723FE /* MyGroupsViewController.swift in Sources */,
+				C8EAB0CB24C6102F0054E37A /* NewsCell.swift in Sources */,
 				C8A712EE24B790A200C723FE /* FriendsViewController.swift in Sources */,
+				C8EAB0C824C60FD50054E37A /* NewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
