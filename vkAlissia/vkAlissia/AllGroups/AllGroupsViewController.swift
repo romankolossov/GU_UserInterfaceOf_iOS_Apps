@@ -27,11 +27,27 @@ class AllGroupsViewController: UIViewController {
         GroupData(groupName: "Rolls-Roys", groupAvatar: UIImage(named: "Rolls-Roys")!),
         GroupData(groupName: "Volvo", groupAvatar: UIImage(named: "Volvo")!)
     ]
+    
+    var sections: [Character: [GroupData]] = [:]
+    var sectionTitles = [Character]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        
+        for group in groups {
+            let firstLetter = group.groupName.first!
+            
+            if sections[firstLetter] != nil {
+                sections[firstLetter]?.append(group)
+            } else {
+                sections[firstLetter] = [group]
+            }
+        }
+        
+        sectionTitles = Array(sections.keys)
+        sectionTitles.sort()
         
         tableView.register(UINib(nibName: "GroupCell", bundle: Bundle.main), forCellReuseIdentifier: "GroupCell")
     }
@@ -40,13 +56,24 @@ class AllGroupsViewController: UIViewController {
 // MARK: - UITableViewDataSource
 extension AllGroupsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return groups.count
+        return sections[sectionTitles[section]]?.count ?? 0
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sections.count
+    }
+    
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return sectionTitles.map{String($0)}
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return String(sectionTitles[section])
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath) as? GroupCell else { fatalError() }
-        
-        let group = groups[indexPath.row]
+        guard  let group = sections[sectionTitles[indexPath.section]]? [indexPath.row] else { fatalError() }
         
         cell.groupNameLabel.text = group.groupName
         cell.groupAvatarView.image = group.groupAvatar
