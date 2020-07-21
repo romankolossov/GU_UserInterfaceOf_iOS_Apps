@@ -63,18 +63,21 @@ class FriendsViewController: UIViewController {
         
         sectionTitles = Array(sections.keys)
         sectionTitles.sort()
+        
+        tableView.register(UINib(nibName: "FriendCell", bundle: Bundle.main), forCellReuseIdentifier: "FriendCell")
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        if let destination = segue.destination as? ParticularFriendViewController {
-            guard let cell = sender as? FriendCell else { return }
-            
-            destination.friendName = cell.nameLabel.text
-            destination.friendAvatar = cell.friendAvatarView.image
-            destination.favoriteImages = cell.favoriteImages
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        super.prepare(for: segue, sender: sender)
+//        if let destination = segue.destination as? ParticularFriendViewController {
+//            guard let cell = sender as? FriendCell else { return }
+//
+//            destination.friendName = cell.nameLabel.text
+//            destination.friendAvatar = cell.friendAvatarView.image
+//            destination.favoriteImages = cell.favoriteImages
+//        }
+//    }
+    
 }
 
 // MARK: - UITableViewDataSource
@@ -117,5 +120,9 @@ extension FriendsViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension FriendsViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let vc = storyboard?.instantiateViewController(identifier: "ParticularFriend") as? ParticularFriendViewController else { return }
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

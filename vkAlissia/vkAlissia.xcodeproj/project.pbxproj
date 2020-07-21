@@ -30,6 +30,7 @@
 		C8EAB0C824C60FD50054E37A /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EAB0C724C60FD50054E37A /* NewsViewController.swift */; };
 		C8EAB0CB24C6102F0054E37A /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EAB0C924C6102F0054E37A /* NewsCell.swift */; };
 		C8EAB0CE24C6121A0054E37A /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8EAB0CD24C6121A0054E37A /* NewsCell.xib */; };
+		C8EAB0D024C785550054E37A /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8EAB0CF24C785550054E37A /* FriendCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		C8EAB0C724C60FD50054E37A /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		C8EAB0C924C6102F0054E37A /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		C8EAB0CD24C6121A0054E37A /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
+		C8EAB0CF24C785550054E37A /* FriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 			children = (
 				C8A712ED24B790A200C723FE /* FriendsViewController.swift */,
 				C88E7F7E24B79967002D72AE /* FriendCell.swift */,
+				C8EAB0CF24C785550054E37A /* FriendCell.xib */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				C83D607D24ACDA0500D1DC1C /* LaunchScreen.storyboard in Resources */,
 				C83D607A24ACDA0500D1DC1C /* Assets.xcassets in Resources */,
 				C83D607824ACDA0400D1DC1C /* Main.storyboard in Resources */,
+				C8EAB0D024C785550054E37A /* FriendCell.xib in Resources */,
 				C87F752F24C3F16C004620E7 /* GroupCell.xib in Resources */,
 				C8EAB0CE24C6121A0054E37A /* NewsCell.xib in Resources */,
 				C8EAB0C324C46FB20054E37A /* MyGroupCell.xib in Resources */,
