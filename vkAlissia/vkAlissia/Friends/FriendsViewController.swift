@@ -73,7 +73,6 @@ class FriendsViewController: UIViewController {
 //            guard let cell = sender as? FriendCell else { return }
 //
 //            destination.friendName = cell.nameLabel.text
-//            destination.friendAvatar = cell.friendAvatarView.image
 //            destination.favoriteImages = cell.favoriteImages
 //        }
 //    }
@@ -122,6 +121,10 @@ extension FriendsViewController: UITableViewDataSource {
 extension FriendsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let vc = storyboard?.instantiateViewController(identifier: "ParticularFriend") as? ParticularFriendViewController else { return }
+        guard let friend = sections[sectionTitles[indexPath.section]]? [indexPath.row] else { return }
+        
+        vc.friendName = friend.friendName
+        vc.favoriteImages = friend.favorireImages
         
         navigationController?.pushViewController(vc, animated: true)
     }

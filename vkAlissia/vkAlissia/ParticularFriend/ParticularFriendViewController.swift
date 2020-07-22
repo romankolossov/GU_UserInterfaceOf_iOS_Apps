@@ -11,7 +11,6 @@ import UIKit
 class ParticularFriendViewController: UIViewController {
     @IBOutlet weak var collectiovView: UICollectionView!
     var friendName: String?
-    var friendAvatar: UIImage?
     var favoriteImages: [UIImage] = []
  
     override func viewDidLoad() {
@@ -36,7 +35,7 @@ extension ParticularFriendViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ParticularFriendCell", for: indexPath) as? ParticularFriendCell else { fatalError() }
         
         cell.nameLabel.text = friendName
-        cell.friendImageView.image = favoriteImages[indexPath.row]
+        cell.favoriteImageView.image = favoriteImages[indexPath.row]
         
         return cell
     }

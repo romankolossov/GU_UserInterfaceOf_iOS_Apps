@@ -386,7 +386,7 @@
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="backView" destination="BeU-0U-2Re" id="78m-5C-EoT"/>
-                                            <outlet property="friendImageView" destination="GqD-Je-BFV" id="BIi-hw-FI8"/>
+                                            <outlet property="favoriteImageView" destination="GqD-Je-BFV" id="BIi-hw-FI8"/>
                                             <outlet property="nameLabel" destination="EQG-dv-xo7" id="7eC-Aq-tdO"/>
                                         </connections>
                                     </collectionViewCell>
