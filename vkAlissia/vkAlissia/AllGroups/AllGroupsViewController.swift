@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol AllGroupsViewControllerDelegate: class {
+    func addFavoriteGroup(_ group: GroupData)
+}
+
 class AllGroupsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
@@ -30,7 +34,9 @@ class AllGroupsViewController: UIViewController {
     
     var sections: [Character: [GroupData]] = [:]
     var sectionTitles = [Character]()
-
+    
+    weak var delegate: AllGroupsViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -84,5 +90,10 @@ extension AllGroupsViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension AllGroupsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard  let group = sections[sectionTitles[indexPath.section]]? [indexPath.row] else { fatalError() }
+
+        delegate?.addFavoriteGroup(group)
+    }
     
 }

@@ -12,7 +12,7 @@ class ParticularFriendViewController: UIViewController {
     @IBOutlet weak var collectiovView: UICollectionView!
     var friendName: String?
     var favoriteImages: [UIImage] = []
- 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectiovView.dataSource = self
