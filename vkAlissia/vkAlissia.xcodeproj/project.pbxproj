@@ -25,6 +25,7 @@
 		C8A712EB24B7901D00C723FE /* ParticularFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A712EA24B7901D00C723FE /* ParticularFriendViewController.swift */; };
 		C8A712EE24B790A200C723FE /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A712ED24B790A200C723FE /* FriendsViewController.swift */; };
 		C8B36EA224C2CBD400E59252 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B36EA124C2CBD400E59252 /* LikeControl.swift */; };
+		C8E65C8924CA773100F2C35F /* FriendLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E65C8824CA773100F2C35F /* FriendLayout.swift */; };
 		C8EAB0C124C46F1E0054E37A /* MyGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EAB0C024C46F1E0054E37A /* MyGroupCell.swift */; };
 		C8EAB0C324C46FB20054E37A /* MyGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8EAB0C224C46FB20054E37A /* MyGroupCell.xib */; };
 		C8EAB0C824C60FD50054E37A /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EAB0C724C60FD50054E37A /* NewsViewController.swift */; };
@@ -73,6 +74,7 @@
 		C8A712EA24B7901D00C723FE /* ParticularFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticularFriendViewController.swift; sourceTree = "<group>"; };
 		C8A712ED24B790A200C723FE /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		C8B36EA124C2CBD400E59252 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
+		C8E65C8824CA773100F2C35F /* FriendLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendLayout.swift; sourceTree = "<group>"; };
 		C8EAB0C024C46F1E0054E37A /* MyGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupCell.swift; sourceTree = "<group>"; };
 		C8EAB0C224C46FB20054E37A /* MyGroupCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyGroupCell.xib; sourceTree = "<group>"; };
 		C8EAB0C724C60FD50054E37A /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				C8A712EA24B7901D00C723FE /* ParticularFriendViewController.swift */,
 				C88E7F8624B94FA4002D72AE /* ParticularFriendCell.swift */,
 				C8B36EA124C2CBD400E59252 /* LikeControl.swift */,
+				C8E65C8824CA773100F2C35F /* FriendLayout.swift */,
 			);
 			path = ParticularFriend;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				C8EAB0CB24C6102F0054E37A /* NewsCell.swift in Sources */,
 				C8A712EE24B790A200C723FE /* FriendsViewController.swift in Sources */,
 				C8EAB0C824C60FD50054E37A /* NewsViewController.swift in Sources */,
+				C8E65C8924CA773100F2C35F /* FriendLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
