@@ -11,7 +11,9 @@ import UIKit
 class MyGroupsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    var myGroups: [GroupData] = []
+    var myGroups: [GroupData] = [
+        GroupData(groupName: "Test Group", groupAvatar: UIImage(named: "Acura")!)
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
