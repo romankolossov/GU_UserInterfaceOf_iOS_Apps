@@ -13,6 +13,9 @@ class LoginFormController: UIViewController {
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    @IBOutlet weak var loginLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -26,6 +29,11 @@ class LoginFormController: UIViewController {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         scrollView.addGestureRecognizer(tapGesture)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animateTitleAppearing()
     }
     
     @objc func keyboardWillBeShown(notification: Notification) {
@@ -85,5 +93,20 @@ class LoginFormController: UIViewController {
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    func animateTitleAppearing() {
+        let ofset = view.bounds.width
+        loginLabel.transform = CGAffineTransform(translationX: -ofset, y: 0)
+        passwordLabel.transform = CGAffineTransform(translationX: ofset, y: 0)
+        
+        UIView.animate(withDuration: 1,
+                       delay: 1,
+                       options: .curveEaseOut,
+                       animations: {
+                        self.loginLabel.transform = .identity
+                        self.passwordLabel.transform = .identity
+        },
+                       completion: nil)
     }
 }

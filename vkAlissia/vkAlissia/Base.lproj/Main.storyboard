@@ -120,7 +120,9 @@
                     </view>
                     <connections>
                         <outlet property="loginField" destination="6BC-Pk-rpH" id="ftF-h0-5g9"/>
+                        <outlet property="loginLabel" destination="617-TV-Oxk" id="1IV-au-EIa"/>
                         <outlet property="passwordField" destination="i6W-Bm-K7s" id="eVG-Su-4B0"/>
+                        <outlet property="passwordLabel" destination="gvR-BX-gXg" id="CLw-td-V09"/>
                         <outlet property="scrollView" destination="Ktv-55-zf6" id="rVy-32-w1H"/>
                     </connections>
                 </viewController>
