@@ -54,7 +54,6 @@ class LikeControl: UIControl {
         }
     }
     
-    
     @objc func onHeartTapped(_ gesture: UIGestureRecognizer) {
         isSelected = !isSelected
         animateImageView()

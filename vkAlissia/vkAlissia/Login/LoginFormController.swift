@@ -12,10 +12,15 @@ class LoginFormController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authButton: UIButton!
+    
+    private let heartLabelA = UILabel()
+    private let heartLabelB = UILabel()
+    private let heartLabelC = UILabel()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -31,6 +36,37 @@ class LoginFormController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         scrollView.addGestureRecognizer(tapGesture)
         
+        heartLabelA.text = "❤️"
+        heartLabelB.text = "❤️"
+        heartLabelC.text = "❤️"
+        
+        view.addSubview(heartLabelA)
+        view.addSubview(heartLabelB)
+        view.addSubview(heartLabelC)
+        
+        heartLabelA.translatesAutoresizingMaskIntoConstraints = false
+        heartLabelB.translatesAutoresizingMaskIntoConstraints = false
+        heartLabelC.translatesAutoresizingMaskIntoConstraints = false
+        
+        let heartLabelBConstraints = [
+            heartLabelB.topAnchor.constraint(equalTo: titleLabel.bottomAnchor),
+            heartLabelB.centerXAnchor.constraint(equalTo: titleLabel.centerXAnchor),
+        ]
+        
+        let heartLabelCConstraints = [
+            heartLabelC.leftAnchor.constraint(equalTo: heartLabelB.rightAnchor),
+            heartLabelC.centerYAnchor.constraint(equalTo: heartLabelB.centerYAnchor),
+        ]
+        
+        let heartLabelAConstraints = [
+            heartLabelA.rightAnchor.constraint(equalTo: heartLabelB.leftAnchor),
+            heartLabelA.centerYAnchor.constraint(equalTo: heartLabelB.centerYAnchor),
+        ]
+        
+        NSLayoutConstraint.activate(heartLabelAConstraints + heartLabelBConstraints + heartLabelCConstraints
+        )
+        
+        animateHeartBeats()
         animateTitleAppearing()
         animateFieldAppearing()
         animateAuthButton()
@@ -143,7 +179,7 @@ class LoginFormController: UIViewController {
         animation.duration = 1.6
         animation.beginTime = CACurrentMediaTime() + 1
         animation.fillMode = CAMediaTimingFillMode.backwards
-
+        
         authButton.layer.add(animation, forKey: nil)
     }
     
@@ -176,5 +212,22 @@ class LoginFormController: UIViewController {
             self.passwordField.frame.origin.x -= 1
             self.passwordField.frame.origin.y -= 1
         }
+    }
+    
+    func animateHeartBeats() {
+        let animation = CASpringAnimation(keyPath: "transform.scale")
+        animation.fromValue = 0
+        animation.toValue = 1
+        animation.stiffness = 200
+        animation.mass = 1.3
+        animation.duration = 1.6
+        animation.repeatCount = .infinity
+        animation.autoreverses = true
+        animation.beginTime = CACurrentMediaTime() + 1
+        animation.fillMode = CAMediaTimingFillMode.backwards
+        
+        heartLabelA.layer.add(animation, forKey: nil)
+        heartLabelB.layer.add(animation, forKey: nil)
+        heartLabelC.layer.add(animation, forKey: nil)
     }
 }
