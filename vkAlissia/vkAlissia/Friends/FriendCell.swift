@@ -46,10 +46,9 @@ class FriendCell: UITableViewCell {
     func animateAvatarView() {
         let animation = CASpringAnimation(keyPath: "transform.scale")
         animation.fromValue = 0
-        //animation.toValue = 1
         animation.byValue = 1
-        animation.stiffness = 300
-        animation.mass = 2
+        animation.stiffness = 230
+        animation.mass = 1.3
         animation.duration = 2
         animation.beginTime = CACurrentMediaTime()
         animation.fillMode = CAMediaTimingFillMode.backwards
