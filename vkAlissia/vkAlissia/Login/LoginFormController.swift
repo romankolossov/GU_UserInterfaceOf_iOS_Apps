@@ -81,6 +81,7 @@ class LoginFormController: UIViewController {
         guard let passwordText = passwordField.text else { return false }
         
         if loginText == "", passwordText == "" {
+            animateCorrectPassword()
             return true
         } else {
             animateWrongPassword()
@@ -142,8 +143,15 @@ class LoginFormController: UIViewController {
         animation.duration = 1.6
         animation.beginTime = CACurrentMediaTime() + 1
         animation.fillMode = CAMediaTimingFillMode.backwards
-        
+
         authButton.layer.add(animation, forKey: nil)
+    }
+    
+    func animateCorrectPassword() {
+        self.loginField.layer.borderWidth = 1
+        self.loginField.layer.borderColor = UIColor.green.cgColor
+        self.passwordField.layer.borderWidth = 1
+        self.passwordField.layer.borderColor = UIColor.green.cgColor
     }
     
     func animateWrongPassword() {
@@ -155,12 +163,16 @@ class LoginFormController: UIViewController {
                        animations: {
                         self.loginField.layer.borderWidth = 1
                         self.loginField.layer.borderColor = UIColor.red.cgColor
+                        self.loginField.layer.frame.origin.x += 1
+                        self.loginField.layer.frame.origin.y += 1
                         self.passwordField.layer.borderWidth = 1
                         self.passwordField.layer.borderColor = UIColor.red.cgColor
                         self.passwordField.frame.origin.x += 1
                         self.passwordField.frame.origin.y += 1
                         
         }) { _ in
+            self.loginField.layer.frame.origin.x -= 1
+            self.loginField.layer.frame.origin.y -= 1
             self.passwordField.frame.origin.x -= 1
             self.passwordField.frame.origin.y -= 1
         }

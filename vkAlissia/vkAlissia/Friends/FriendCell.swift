@@ -34,11 +34,11 @@ class FriendCell: UITableViewCell {
         
         friendAvatarView.isUserInteractionEnabled = true
         
-        let gesture = UIPanGestureRecognizer(target: self, action: #selector(onHeartTapped(_:)))
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(onAvatarTapped(_:)))
         friendAvatarView.addGestureRecognizer(gesture)
     }
     
-    @objc func onHeartTapped(_ gesture: UIGestureRecognizer) {
+    @objc func onAvatarTapped(_ gesture: UIGestureRecognizer) {
         animateAvatarView()
         //        sendActions(for: .valueChanged)
     }
