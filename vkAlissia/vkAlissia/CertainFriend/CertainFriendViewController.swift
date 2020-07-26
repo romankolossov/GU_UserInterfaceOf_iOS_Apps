@@ -12,6 +12,7 @@ class CertainFriendViewController: UIViewController {
     @IBOutlet weak var collectiovView: UICollectionView!
     var friendName: String?
     var friendImage: UIImage?
+    var favoriteImages: [UIImage] = []
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,7 @@ class CertainFriendViewController: UIViewController {
         collectiovView.delegate = self
         
         if let layout = collectiovView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.itemSize = CGSize(width: 300, height: 300)
+            layout.itemSize = CGSize(width: 202, height: 202)
         }
     }
 }
@@ -28,14 +29,14 @@ class CertainFriendViewController: UIViewController {
 extension CertainFriendViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 1
+        return favoriteImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CertainFriendCell", for: indexPath) as? CertainFriendCell else { fatalError() }
         
         cell.nameLabel.text = friendName
-        cell.friendImageView.image = friendImage
+        cell.friendImageView.image = favoriteImages[indexPath.row]
         
         return cell
     }

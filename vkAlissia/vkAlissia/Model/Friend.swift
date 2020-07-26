@@ -11,9 +11,11 @@ import UIKit
 class FriendData {
     let friendName: String
     var friendImage: UIImage
+    var favorireImages: [UIImage] = []
     
-    init(friendName: String, friendImage: UIImage) {
+    init(friendName: String, friendImage: UIImage, favoriteImages: [UIImage]) {
         self.friendName = friendName
         self.friendImage = friendImage
+        self.favorireImages = favoriteImages
     }
 }
