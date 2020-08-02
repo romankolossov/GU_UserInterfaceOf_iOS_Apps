@@ -43,5 +43,11 @@ extension ParticularFriendViewController: UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegate
 extension ParticularFriendViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let friendPhotoVC = storyboard?.instantiateViewController(identifier: "FriendPhotoVC") as? FriendPhotoViewController else { return }
+        friendPhotoVC.favoriteImages = favoriteImages
+        friendPhotoVC.currentIndex = indexPath.row
     
+        navigationController?.pushViewController(friendPhotoVC, animated: true)
+    }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C827ED9824D7152900B0E449 /* FriendPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C827ED9724D7152900B0E449 /* FriendPhotoViewController.swift */; };
 		C83D607124ACDA0400D1DC1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D607024ACDA0400D1DC1C /* AppDelegate.swift */; };
 		C83D607324ACDA0400D1DC1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D607224ACDA0400D1DC1C /* SceneDelegate.swift */; };
 		C83D607824ACDA0400D1DC1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83D607624ACDA0400D1DC1C /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C827ED9724D7152900B0E449 /* FriendPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoViewController.swift; sourceTree = "<group>"; };
 		C83D606D24ACDA0400D1DC1C /* vkAlissia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vkAlissia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83D607024ACDA0400D1DC1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C83D607224ACDA0400D1DC1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				C88E7F8624B94FA4002D72AE /* ParticularFriendCell.swift */,
 				C8B36EA124C2CBD400E59252 /* LikeControl.swift */,
 				C8E65C8824CA773100F2C35F /* FriendLayout.swift */,
+				C827ED9724D7152900B0E449 /* FriendPhotoViewController.swift */,
 			);
 			path = ParticularFriend;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				C83D607324ACDA0400D1DC1C /* SceneDelegate.swift in Sources */,
 				C8B36EA224C2CBD400E59252 /* LikeControl.swift in Sources */,
 				C88E7F8224B79E61002D72AE /* Friend.swift in Sources */,
+				C827ED9824D7152900B0E449 /* FriendPhotoViewController.swift in Sources */,
 				C8A712E924B78E6F00C723FE /* MyGroupsViewController.swift in Sources */,
 				C8EAB0CB24C6102F0054E37A /* NewsCell.swift in Sources */,
 				C8A712EE24B790A200C723FE /* FriendsViewController.swift in Sources */,

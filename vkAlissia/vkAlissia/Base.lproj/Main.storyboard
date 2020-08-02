@@ -418,6 +418,21 @@
             </objects>
             <point key="canvasLocation" x="3350.7246376811595" y="-703.125"/>
         </scene>
+        <!--Friend Photo View Controller-->
+        <scene sceneID="XOZ-Ve-b1s">
+            <objects>
+                <viewController storyboardIdentifier="FriendPhotoVC" id="KWf-MM-jXM" customClass="FriendPhotoViewController" customModule="vkAlissia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e8H-Pz-66E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="KNO-hc-kf1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t1e-8v-wjC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4171" y="-703"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Alissia_face" width="1537" height="2049"/>
