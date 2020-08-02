@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C827ED9824D7152900B0E449 /* FriendPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C827ED9724D7152900B0E449 /* FriendPhotoViewController.swift */; };
+		C827ED9A24D7510200B0E449 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C827ED9924D7510200B0E449 /* Animations.swift */; };
 		C83D607124ACDA0400D1DC1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D607024ACDA0400D1DC1C /* AppDelegate.swift */; };
 		C83D607324ACDA0400D1DC1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D607224ACDA0400D1DC1C /* SceneDelegate.swift */; };
 		C83D607824ACDA0400D1DC1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83D607624ACDA0400D1DC1C /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		C827ED9724D7152900B0E449 /* FriendPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoViewController.swift; sourceTree = "<group>"; };
+		C827ED9924D7510200B0E449 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		C83D606D24ACDA0400D1DC1C /* vkAlissia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vkAlissia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83D607024ACDA0400D1DC1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C83D607224ACDA0400D1DC1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				C83D607224ACDA0400D1DC1C /* SceneDelegate.swift */,
 				C83D607924ACDA0500D1DC1C /* Assets.xcassets */,
 				C83D607B24ACDA0500D1DC1C /* LaunchScreen.storyboard */,
+				C827ED9924D7510200B0E449 /* Animations.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				C83D60A124ACDAF600D1DC1C /* LoginFormController.swift in Sources */,
 				C88E7F8424B79E91002D72AE /* Group.swift in Sources */,
 				C88E7F7F24B79967002D72AE /* FriendCell.swift in Sources */,
+				C827ED9A24D7510200B0E449 /* Animations.swift in Sources */,
 				C88E7F8724B94FA4002D72AE /* ParticularFriendCell.swift in Sources */,
 				C87F752A24C3EC2A004620E7 /* GroupCell.swift in Sources */,
 				C83D607124ACDA0400D1DC1C /* AppDelegate.swift in Sources */,

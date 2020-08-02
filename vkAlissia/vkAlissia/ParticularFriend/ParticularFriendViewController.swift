@@ -10,6 +10,7 @@ import UIKit
 
 class ParticularFriendViewController: UIViewController {
     @IBOutlet weak var collectiovView: UICollectionView!
+    let interactiveTransition = InteractiveTransition()
     var friendName: String?
     var favoriteImages: [UIImage] = []
     
@@ -45,9 +46,41 @@ extension ParticularFriendViewController: UICollectionViewDataSource {
 extension ParticularFriendViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let friendPhotoVC = storyboard?.instantiateViewController(identifier: "FriendPhotoVC") as? FriendPhotoViewController else { return }
+        
         friendPhotoVC.favoriteImages = favoriteImages
         friendPhotoVC.currentIndex = indexPath.row
-    
+        
+        navigationController?.delegate = self
         navigationController?.pushViewController(friendPhotoVC, animated: true)
     }
+}
+
+// MARK: - UINavigationControllerDelegate
+extension ParticularFriendViewController: UINavigationControllerDelegate {
+
+
+    func navigationController(_ navigationController: UINavigationController,
+                              interactionControllerFor animationController: UIViewControllerAnimatedTransitioning)
+                              -> UIViewControllerInteractiveTransitioning? {
+        return interactiveTransition.hasStarted ? interactiveTransition : nil
+    }
+    
+    func navigationController(_ navigationController: UINavigationController,
+                              animationControllerFor operation: UINavigationController.Operation,
+                              from fromVC: UIViewController,
+                              to toVC: UIViewController)
+                              -> UIViewControllerAnimatedTransitioning? {
+        if operation == .push {
+            self.interactiveTransition.viewController = toVC
+            
+            return PushAnimator()
+        } else if operation == .pop {
+            if navigationController.viewControllers.first != toVC {
+                self.interactiveTransition.viewController = toVC
+            }
+            return PopAnimator()
+        }
+        return nil
+    }
+
 }
