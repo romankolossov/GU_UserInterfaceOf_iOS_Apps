@@ -8,12 +8,11 @@
 
 import UIKit
 
-class CertainFriendViewController: UIViewController {
+class ParticularFriendViewController: UIViewController {
     @IBOutlet weak var collectiovView: UICollectionView!
     var friendName: String?
-    var friendImage: UIImage?
     var favoriteImages: [UIImage] = []
- 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectiovView.dataSource = self
@@ -26,23 +25,23 @@ class CertainFriendViewController: UIViewController {
 }
 
 // MARK: - UICollectionViewDataSource
-extension CertainFriendViewController: UICollectionViewDataSource {
+extension ParticularFriendViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return favoriteImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CertainFriendCell", for: indexPath) as? CertainFriendCell else { fatalError() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ParticularFriendCell", for: indexPath) as? ParticularFriendCell else { fatalError() }
         
         cell.nameLabel.text = friendName
-        cell.friendImageView.image = favoriteImages[indexPath.row]
+        cell.favoriteImageView.image = favoriteImages[indexPath.row]
         
         return cell
     }
 }
 
 // MARK: - UICollectionViewDelegate
-extension CertainFriendViewController: UICollectionViewDelegate {
+extension ParticularFriendViewController: UICollectionViewDelegate {
     
 }

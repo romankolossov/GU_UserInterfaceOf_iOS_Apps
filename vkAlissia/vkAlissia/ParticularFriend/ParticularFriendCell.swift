@@ -8,9 +8,9 @@
 
 import UIKit
 
-class CertainFriendCell: UICollectionViewCell {
+class ParticularFriendCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var friendImageView: UIImageView!
+    @IBOutlet weak var favoriteImageView: UIImageView!
     @IBOutlet weak var backView: UIView!
     
     let likeControl = LikeControl()

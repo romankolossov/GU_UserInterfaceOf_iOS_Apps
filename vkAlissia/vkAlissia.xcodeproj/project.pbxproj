@@ -14,15 +14,24 @@
 		C83D607D24ACDA0500D1DC1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83D607B24ACDA0500D1DC1C /* LaunchScreen.storyboard */; };
 		C83D60A124ACDAF600D1DC1C /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D60A024ACDAF600D1DC1C /* LoginFormController.swift */; };
 		C84AAD7C24BB4EC700AD0084 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84AAD7B24BB4EC700AD0084 /* GradientView.swift */; };
+		C87F752A24C3EC2A004620E7 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87F752824C3EC2A004620E7 /* GroupCell.swift */; };
+		C87F752F24C3F16C004620E7 /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C87F752E24C3F16C004620E7 /* GroupCell.xib */; };
 		C88E7F7F24B79967002D72AE /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88E7F7E24B79967002D72AE /* FriendCell.swift */; };
 		C88E7F8224B79E61002D72AE /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88E7F8124B79E61002D72AE /* Friend.swift */; };
 		C88E7F8424B79E91002D72AE /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88E7F8324B79E91002D72AE /* Group.swift */; };
-		C88E7F8724B94FA4002D72AE /* CertainFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88E7F8624B94FA4002D72AE /* CertainFriendCell.swift */; };
-		C8A712E724B78E3B00C723FE /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A712E624B78E3B00C723FE /* GroupsViewController.swift */; };
+		C88E7F8724B94FA4002D72AE /* ParticularFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88E7F8624B94FA4002D72AE /* ParticularFriendCell.swift */; };
+		C8A712E724B78E3B00C723FE /* AllGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A712E624B78E3B00C723FE /* AllGroupsViewController.swift */; };
 		C8A712E924B78E6F00C723FE /* MyGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A712E824B78E6F00C723FE /* MyGroupsViewController.swift */; };
-		C8A712EB24B7901D00C723FE /* CertainFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A712EA24B7901D00C723FE /* CertainFriendViewController.swift */; };
+		C8A712EB24B7901D00C723FE /* ParticularFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A712EA24B7901D00C723FE /* ParticularFriendViewController.swift */; };
 		C8A712EE24B790A200C723FE /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A712ED24B790A200C723FE /* FriendsViewController.swift */; };
 		C8B36EA224C2CBD400E59252 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B36EA124C2CBD400E59252 /* LikeControl.swift */; };
+		C8E65C8924CA773100F2C35F /* FriendLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E65C8824CA773100F2C35F /* FriendLayout.swift */; };
+		C8EAB0C124C46F1E0054E37A /* MyGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EAB0C024C46F1E0054E37A /* MyGroupCell.swift */; };
+		C8EAB0C324C46FB20054E37A /* MyGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8EAB0C224C46FB20054E37A /* MyGroupCell.xib */; };
+		C8EAB0C824C60FD50054E37A /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EAB0C724C60FD50054E37A /* NewsViewController.swift */; };
+		C8EAB0CB24C6102F0054E37A /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EAB0C924C6102F0054E37A /* NewsCell.swift */; };
+		C8EAB0CE24C6121A0054E37A /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8EAB0CD24C6121A0054E37A /* NewsCell.xib */; };
+		C8EAB0D024C785550054E37A /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8EAB0CF24C785550054E37A /* FriendCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,15 +63,24 @@
 		C83D608E24ACDA0600D1DC1C /* vkAlissiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vkAlissiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83D60A024ACDAF600D1DC1C /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
 		C84AAD7B24BB4EC700AD0084 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		C87F752824C3EC2A004620E7 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		C87F752E24C3F16C004620E7 /* GroupCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupCell.xib; sourceTree = "<group>"; };
 		C88E7F7E24B79967002D72AE /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		C88E7F8124B79E61002D72AE /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		C88E7F8324B79E91002D72AE /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
-		C88E7F8624B94FA4002D72AE /* CertainFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertainFriendCell.swift; sourceTree = "<group>"; };
-		C8A712E624B78E3B00C723FE /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		C88E7F8624B94FA4002D72AE /* ParticularFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticularFriendCell.swift; sourceTree = "<group>"; };
+		C8A712E624B78E3B00C723FE /* AllGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsViewController.swift; sourceTree = "<group>"; };
 		C8A712E824B78E6F00C723FE /* MyGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsViewController.swift; sourceTree = "<group>"; };
-		C8A712EA24B7901D00C723FE /* CertainFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertainFriendViewController.swift; sourceTree = "<group>"; };
+		C8A712EA24B7901D00C723FE /* ParticularFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticularFriendViewController.swift; sourceTree = "<group>"; };
 		C8A712ED24B790A200C723FE /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		C8B36EA124C2CBD400E59252 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
+		C8E65C8824CA773100F2C35F /* FriendLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendLayout.swift; sourceTree = "<group>"; };
+		C8EAB0C024C46F1E0054E37A /* MyGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupCell.swift; sourceTree = "<group>"; };
+		C8EAB0C224C46FB20054E37A /* MyGroupCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyGroupCell.xib; sourceTree = "<group>"; };
+		C8EAB0C724C60FD50054E37A /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		C8EAB0C924C6102F0054E37A /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		C8EAB0CD24C6121A0054E37A /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
+		C8EAB0CF24C785550054E37A /* FriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,20 +129,27 @@
 		C83D606F24ACDA0400D1DC1C /* vkAlissia */ = {
 			isa = PBXGroup;
 			children = (
-				C83D60A024ACDAF600D1DC1C /* LoginFormController.swift */,
-				C84AAD7B24BB4EC700AD0084 /* GradientView.swift */,
 				C83D607624ACDA0400D1DC1C /* Main.storyboard */,
-				C83D607924ACDA0500D1DC1C /* Assets.xcassets */,
-				C88E7F8524B7CE91002D72AE /* Aditions */,
 				C88E7F8024B79E0A002D72AE /* Model */,
+				C87F752724C329B1004620E7 /* Login */,
 				C8A712EC24B7906F00C723FE /* Friends */,
-				C8A712E324B78A4200C723FE /* CertainFriend */,
+				C8A712E324B78A4200C723FE /* ParticularFriend */,
 				C8A712E524B78BA000C723FE /* MyGroups */,
-				C8A712E424B78B7E00C723FE /* Groups */,
-				C83D607B24ACDA0500D1DC1C /* LaunchScreen.storyboard */,
+				C8A712E424B78B7E00C723FE /* AllGroups */,
+				C8EAB0C424C60F070054E37A /* News */,
+				C88E7F8524B7CE91002D72AE /* SupportingFiles */,
 				C83D607E24ACDA0500D1DC1C /* Info.plist */,
 			);
 			path = vkAlissia;
+			sourceTree = "<group>";
+		};
+		C87F752724C329B1004620E7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C83D60A024ACDAF600D1DC1C /* LoginFormController.swift */,
+				C84AAD7B24BB4EC700AD0084 /* GradientView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		C88E7F8024B79E0A002D72AE /* Model */ = {
@@ -136,37 +161,44 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		C88E7F8524B7CE91002D72AE /* Aditions */ = {
+		C88E7F8524B7CE91002D72AE /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				C83D607024ACDA0400D1DC1C /* AppDelegate.swift */,
 				C83D607224ACDA0400D1DC1C /* SceneDelegate.swift */,
+				C83D607924ACDA0500D1DC1C /* Assets.xcassets */,
+				C83D607B24ACDA0500D1DC1C /* LaunchScreen.storyboard */,
 			);
-			path = Aditions;
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		C8A712E324B78A4200C723FE /* CertainFriend */ = {
+		C8A712E324B78A4200C723FE /* ParticularFriend */ = {
 			isa = PBXGroup;
 			children = (
-				C8A712EA24B7901D00C723FE /* CertainFriendViewController.swift */,
-				C88E7F8624B94FA4002D72AE /* CertainFriendCell.swift */,
+				C8A712EA24B7901D00C723FE /* ParticularFriendViewController.swift */,
+				C88E7F8624B94FA4002D72AE /* ParticularFriendCell.swift */,
 				C8B36EA124C2CBD400E59252 /* LikeControl.swift */,
+				C8E65C8824CA773100F2C35F /* FriendLayout.swift */,
 			);
-			path = CertainFriend;
+			path = ParticularFriend;
 			sourceTree = "<group>";
 		};
-		C8A712E424B78B7E00C723FE /* Groups */ = {
+		C8A712E424B78B7E00C723FE /* AllGroups */ = {
 			isa = PBXGroup;
 			children = (
-				C8A712E624B78E3B00C723FE /* GroupsViewController.swift */,
+				C8A712E624B78E3B00C723FE /* AllGroupsViewController.swift */,
+				C87F752824C3EC2A004620E7 /* GroupCell.swift */,
+				C87F752E24C3F16C004620E7 /* GroupCell.xib */,
 			);
-			path = Groups;
+			path = AllGroups;
 			sourceTree = "<group>";
 		};
 		C8A712E524B78BA000C723FE /* MyGroups */ = {
 			isa = PBXGroup;
 			children = (
 				C8A712E824B78E6F00C723FE /* MyGroupsViewController.swift */,
+				C8EAB0C024C46F1E0054E37A /* MyGroupCell.swift */,
+				C8EAB0C224C46FB20054E37A /* MyGroupCell.xib */,
 			);
 			path = MyGroups;
 			sourceTree = "<group>";
@@ -176,8 +208,19 @@
 			children = (
 				C8A712ED24B790A200C723FE /* FriendsViewController.swift */,
 				C88E7F7E24B79967002D72AE /* FriendCell.swift */,
+				C8EAB0CF24C785550054E37A /* FriendCell.xib */,
 			);
 			path = Friends;
+			sourceTree = "<group>";
+		};
+		C8EAB0C424C60F070054E37A /* News */ = {
+			isa = PBXGroup;
+			children = (
+				C8EAB0C724C60FD50054E37A /* NewsViewController.swift */,
+				C8EAB0C924C6102F0054E37A /* NewsCell.swift */,
+				C8EAB0CD24C6121A0054E37A /* NewsCell.xib */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +330,10 @@
 				C83D607D24ACDA0500D1DC1C /* LaunchScreen.storyboard in Resources */,
 				C83D607A24ACDA0500D1DC1C /* Assets.xcassets in Resources */,
 				C83D607824ACDA0400D1DC1C /* Main.storyboard in Resources */,
+				C8EAB0D024C785550054E37A /* FriendCell.xib in Resources */,
+				C87F752F24C3F16C004620E7 /* GroupCell.xib in Resources */,
+				C8EAB0CE24C6121A0054E37A /* NewsCell.xib in Resources */,
+				C8EAB0C324C46FB20054E37A /* MyGroupCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,19 +358,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8A712EB24B7901D00C723FE /* CertainFriendViewController.swift in Sources */,
-				C8A712E724B78E3B00C723FE /* GroupsViewController.swift in Sources */,
+				C8A712EB24B7901D00C723FE /* ParticularFriendViewController.swift in Sources */,
+				C8A712E724B78E3B00C723FE /* AllGroupsViewController.swift in Sources */,
 				C84AAD7C24BB4EC700AD0084 /* GradientView.swift in Sources */,
 				C83D60A124ACDAF600D1DC1C /* LoginFormController.swift in Sources */,
 				C88E7F8424B79E91002D72AE /* Group.swift in Sources */,
 				C88E7F7F24B79967002D72AE /* FriendCell.swift in Sources */,
-				C88E7F8724B94FA4002D72AE /* CertainFriendCell.swift in Sources */,
+				C88E7F8724B94FA4002D72AE /* ParticularFriendCell.swift in Sources */,
+				C87F752A24C3EC2A004620E7 /* GroupCell.swift in Sources */,
 				C83D607124ACDA0400D1DC1C /* AppDelegate.swift in Sources */,
+				C8EAB0C124C46F1E0054E37A /* MyGroupCell.swift in Sources */,
 				C83D607324ACDA0400D1DC1C /* SceneDelegate.swift in Sources */,
 				C8B36EA224C2CBD400E59252 /* LikeControl.swift in Sources */,
 				C88E7F8224B79E61002D72AE /* Friend.swift in Sources */,
 				C8A712E924B78E6F00C723FE /* MyGroupsViewController.swift in Sources */,
+				C8EAB0CB24C6102F0054E37A /* NewsCell.swift in Sources */,
 				C8A712EE24B790A200C723FE /* FriendsViewController.swift in Sources */,
+				C8EAB0C824C60FD50054E37A /* NewsViewController.swift in Sources */,
+				C8E65C8924CA773100F2C35F /* FriendLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

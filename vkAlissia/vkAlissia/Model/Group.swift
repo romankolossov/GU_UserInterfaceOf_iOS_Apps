@@ -10,10 +10,10 @@ import UIKit
 
 class GroupData {
     let groupName: String
-    var groupImage: UIImage
+    var groupAvatar: UIImage
     
-    init(groupName: String, groupImage: UIImage) {
+    init(groupName: String, groupAvatar: UIImage) {
         self.groupName = groupName
-        self.groupImage = groupImage
+        self.groupAvatar = groupAvatar
     }
 }
