@@ -54,12 +54,25 @@ class LikeControl: UIControl {
         }
     }
     
-    
     @objc func onHeartTapped(_ gesture: UIGestureRecognizer) {
         isSelected = !isSelected
+        animateImageView()
         count += isSelected ? 1 : -1
         updateView()
         sendActions(for: .valueChanged)
+    }
+    
+    func animateImageView() {
+        let animation = CASpringAnimation(keyPath: "transform.scale")
+        animation.fromValue = 0
+        animation.toValue = 1
+        animation.stiffness = 200
+        animation.mass = 1
+        animation.duration = 1
+        animation.beginTime = CACurrentMediaTime()
+        animation.fillMode = CAMediaTimingFillMode.backwards
+        
+        imageView.layer.add(animation, forKey: nil)
     }
     
     required init?(coder: NSCoder) {

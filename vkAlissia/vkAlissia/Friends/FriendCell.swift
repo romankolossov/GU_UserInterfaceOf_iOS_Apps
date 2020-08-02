@@ -31,5 +31,29 @@ class FriendCell: UITableViewCell {
         friendAvatarView?.layer.cornerRadius = friendAvatarView.bounds.height / 2
         friendAvatarView?.contentMode = .scaleAspectFill
         friendAvatarView?.clipsToBounds = true
+        
+        friendAvatarView.isUserInteractionEnabled = true
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(onAvatarTapped(_:)))
+        friendAvatarView.addGestureRecognizer(gesture)
+    }
+    
+    @objc func onAvatarTapped(_ gesture: UIGestureRecognizer) {
+        animateAvatarView()
+        //        sendActions(for: .valueChanged)
+    }
+    
+    func animateAvatarView() {
+        let animation = CASpringAnimation(keyPath: "transform.scale")
+        animation.fromValue = 0
+        animation.byValue = 1
+        animation.stiffness = 230
+        animation.mass = 1.3
+        animation.duration = 2
+        animation.beginTime = CACurrentMediaTime()
+        animation.fillMode = CAMediaTimingFillMode.backwards
+        
+        friendAvatarView.layer.add(animation, forKey: nil)
+        shadowView.layer.add(animation, forKey: nil)
     }
 }
