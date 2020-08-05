@@ -22,6 +22,8 @@ class LoginFormController: UIViewController {
     private let heartLabelB = UILabel()
     private let heartLabelC = UILabel()
     
+    var interactiveAnimator: UIViewPropertyAnimator!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -49,7 +51,7 @@ class LoginFormController: UIViewController {
         heartLabelC.translatesAutoresizingMaskIntoConstraints = false
         
         let heartLabelBConstraints = [
-            heartLabelB.topAnchor.constraint(equalTo: titleLabel.bottomAnchor),
+            heartLabelB.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
             heartLabelB.centerXAnchor.constraint(equalTo: titleLabel.centerXAnchor),
         ]
         
@@ -70,6 +72,41 @@ class LoginFormController: UIViewController {
         animateTitleAppearing()
         animateFieldAppearing()
         animateAuthButton()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let recognizer = UIPanGestureRecognizer(target: self, action: #selector(onPan(_:)))
+        view.addGestureRecognizer(recognizer)
+    }
+    
+    @objc func onPan (_ recognizer: UIPanGestureRecognizer) {
+        switch recognizer.state {
+        case .began:
+            interactiveAnimator?.startAnimation()
+            
+            interactiveAnimator = UIViewPropertyAnimator(duration: 0.5,
+                                                         dampingRatio: 0.5,
+                                                         animations: {
+                                                            self.authButton.transform = CGAffineTransform(translationX: 0, y: 150)
+            })
+            
+            interactiveAnimator.pauseAnimation()
+        case .changed:
+            let translation = recognizer.translation(in: view)
+            interactiveAnimator.fractionComplete = translation.y / 100
+        case .ended:
+            interactiveAnimator.stopAnimation(true)
+            
+            interactiveAnimator.addAnimations {
+                self.authButton.transform = .identity
+            }
+            
+            interactiveAnimator.startAnimation()
+        default:
+            return
+        }
     }
     
     @objc func keyboardWillBeShown(notification: Notification) {
