@@ -11,6 +11,7 @@ import UIKit
 class FriendPhotoViewController: UIViewController {
     
     var favoriteImages : [UIImage] = []
+    var nameLabel: UILabel = UILabel()
     var currentIndex: Int = 0
     
     private var currentSign = 0
@@ -38,9 +39,20 @@ class FriendPhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        
         layout(imgView: backgrounImageView)
         layout(imgView: imageView)
+        
         setImages()
+        
+        // MARK: label issue
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(nameLabel)
+        NSLayoutConstraint.activate([
+            nameLabel.topAnchor.constraint(equalTo: view.topAnchor),
+            nameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        ])
         
         let gesture = UIPanGestureRecognizer(target: self, action: #selector(onPan(_:)))
         imageView.addGestureRecognizer(gesture)
@@ -146,6 +158,4 @@ class FriendPhotoViewController: UIViewController {
             break
         }
     }
-    
-
 }

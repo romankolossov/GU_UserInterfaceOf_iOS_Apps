@@ -48,6 +48,7 @@ extension ParticularFriendViewController: UICollectionViewDelegate {
         guard let friendPhotoVC = storyboard?.instantiateViewController(identifier: "FriendPhotoVC") as? FriendPhotoViewController else { return }
         
         friendPhotoVC.favoriteImages = favoriteImages
+        friendPhotoVC.nameLabel.text = friendName
         friendPhotoVC.currentIndex = indexPath.row
         
         navigationController?.delegate = self
