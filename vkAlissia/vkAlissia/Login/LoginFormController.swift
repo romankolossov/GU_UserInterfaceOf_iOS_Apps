@@ -22,6 +22,8 @@ class LoginFormController: UIViewController {
     private let heartLabelB = UILabel()
     private let heartLabelC = UILabel()
     
+    @IBOutlet weak var starView: StarView!
+    
     var interactiveAnimator: UIViewPropertyAnimator!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,6 +69,9 @@ class LoginFormController: UIViewController {
         
         NSLayoutConstraint.activate(heartLabelAConstraints + heartLabelBConstraints + heartLabelCConstraints
         )
+        
+        starView.configure()
+        starView.animate()
         
         animateHeartBeats()
         animateTitleAppearing()
@@ -216,10 +221,10 @@ class LoginFormController: UIViewController {
         
         let animationGroup = CAAnimationGroup()
         animationGroup.duration = 1.8
-               animationGroup.beginTime = CACurrentMediaTime() + 1
-               animationGroup.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
-               animationGroup.fillMode = CAMediaTimingFillMode.backwards
-               animationGroup.animations = [fadeInAnimation, scaleAnimation]
+        animationGroup.beginTime = CACurrentMediaTime() + 1
+        animationGroup.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        animationGroup.fillMode = CAMediaTimingFillMode.backwards
+        animationGroup.animations = [fadeInAnimation, scaleAnimation]
         
         loginField.layer.add(animationGroup, forKey: nil)
         passwordField.layer.add(animationGroup, forKey: nil)

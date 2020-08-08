@@ -64,6 +64,14 @@
                                             <constraint firstAttribute="width" secondItem="ik6-H0-4fG" secondAttribute="height" multiplier="1:1" id="qAI-ER-Sma"/>
                                         </constraints>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HuR-wH-i8W" customClass="StarView" customModule="vkAlissia" customModuleProvider="target">
+                                        <rect key="frame" x="167" y="639.5" width="80" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Fzl-SU-jaJ"/>
+                                            <constraint firstAttribute="width" secondItem="HuR-wH-i8W" secondAttribute="height" multiplier="1:1" id="hbO-hU-a9p"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="gvR-BX-gXg" firstAttribute="top" secondItem="6BC-Pk-rpH" secondAttribute="bottom" constant="36" id="1S9-gd-7dl"/>
@@ -71,19 +79,21 @@
                                     <constraint firstItem="ik6-H0-4fG" firstAttribute="centerX" secondItem="9eg-B3-Nnj" secondAttribute="centerX" id="5lI-Em-j0w"/>
                                     <constraint firstItem="ik6-H0-4fG" firstAttribute="width" secondItem="Ktv-55-zf6" secondAttribute="width" multiplier="0.33" id="9Vi-X1-jlM"/>
                                     <constraint firstItem="E2K-5N-bHG" firstAttribute="centerX" secondItem="i6W-Bm-K7s" secondAttribute="centerX" id="Bji-IG-nXc"/>
-                                    <constraint firstAttribute="bottom" secondItem="E2K-5N-bHG" secondAttribute="bottom" constant="20" id="EEt-9F-s1d"/>
                                     <constraint firstItem="617-TV-Oxk" firstAttribute="top" secondItem="9eg-B3-Nnj" secondAttribute="bottom" constant="58" id="Fr9-Ld-qtW"/>
                                     <constraint firstAttribute="trailing" secondItem="9eg-B3-Nnj" secondAttribute="trailing" constant="20" symbolic="YES" id="HOY-Xv-aXc"/>
+                                    <constraint firstItem="HuR-wH-i8W" firstAttribute="top" secondItem="E2K-5N-bHG" secondAttribute="bottom" constant="11" id="KHu-aW-mSu"/>
                                     <constraint firstItem="6BC-Pk-rpH" firstAttribute="top" secondItem="617-TV-Oxk" secondAttribute="bottom" constant="36" id="MdD-Eg-NsK"/>
                                     <constraint firstItem="9eg-B3-Nnj" firstAttribute="top" secondItem="ik6-H0-4fG" secondAttribute="bottom" constant="38" id="O5a-Jv-niq"/>
                                     <constraint firstItem="9eg-B3-Nnj" firstAttribute="centerX" secondItem="Ktv-55-zf6" secondAttribute="centerX" id="Vtv-gH-lPl"/>
                                     <constraint firstItem="ik6-H0-4fG" firstAttribute="top" secondItem="Ktv-55-zf6" secondAttribute="top" constant="58" id="XQd-ly-c9q"/>
+                                    <constraint firstItem="HuR-wH-i8W" firstAttribute="centerX" secondItem="E2K-5N-bHG" secondAttribute="centerX" id="ahx-gV-34S"/>
                                     <constraint firstItem="E2K-5N-bHG" firstAttribute="top" secondItem="i6W-Bm-K7s" secondAttribute="bottom" constant="36" id="erH-GI-eO0"/>
                                     <constraint firstItem="i6W-Bm-K7s" firstAttribute="centerX" secondItem="gvR-BX-gXg" secondAttribute="centerX" id="erX-yu-2oE"/>
                                     <constraint firstItem="gvR-BX-gXg" firstAttribute="centerX" secondItem="6BC-Pk-rpH" secondAttribute="centerX" id="h7S-Ft-moD"/>
                                     <constraint firstItem="i6W-Bm-K7s" firstAttribute="top" secondItem="gvR-BX-gXg" secondAttribute="bottom" constant="36" id="lh5-7X-jqe"/>
                                     <constraint firstItem="617-TV-Oxk" firstAttribute="centerX" secondItem="9eg-B3-Nnj" secondAttribute="centerX" id="nFD-Vq-t1K"/>
                                     <constraint firstItem="6BC-Pk-rpH" firstAttribute="centerX" secondItem="617-TV-Oxk" secondAttribute="centerX" id="qAY-N5-PFg"/>
+                                    <constraint firstAttribute="bottom" secondItem="HuR-wH-i8W" secondAttribute="bottom" constant="21" id="qs1-av-3Bq"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Ks8-LG-oZV"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="ZAC-ng-5ME"/>
@@ -125,12 +135,13 @@
                         <outlet property="passwordField" destination="i6W-Bm-K7s" id="eVG-Su-4B0"/>
                         <outlet property="passwordLabel" destination="gvR-BX-gXg" id="CLw-td-V09"/>
                         <outlet property="scrollView" destination="Ktv-55-zf6" id="rVy-32-w1H"/>
+                        <outlet property="starView" destination="HuR-wH-i8W" id="Ukl-ru-nLS"/>
                         <outlet property="titleLabel" destination="9eg-B3-Nnj" id="4AG-Uj-Yal"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-72" y="-703"/>
+            <point key="canvasLocation" x="-72.463768115942031" y="-703.125"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gTd-x4-kBr">
