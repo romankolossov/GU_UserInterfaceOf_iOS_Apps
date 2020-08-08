@@ -141,6 +141,7 @@
 				C8A712E524B78BA000C723FE /* MyGroups */,
 				C8A712E424B78B7E00C723FE /* AllGroups */,
 				C8EAB0C424C60F070054E37A /* News */,
+				C895663C24DD0673007751A3 /* Extensions */,
 				C88E7F8524B7CE91002D72AE /* SupportingFiles */,
 				C83D607E24ACDA0500D1DC1C /* Info.plist */,
 			);
@@ -172,9 +173,16 @@
 				C83D607224ACDA0400D1DC1C /* SceneDelegate.swift */,
 				C83D607924ACDA0500D1DC1C /* Assets.xcassets */,
 				C83D607B24ACDA0500D1DC1C /* LaunchScreen.storyboard */,
-				C827ED9924D7510200B0E449 /* Animations.swift */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C895663C24DD0673007751A3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C827ED9924D7510200B0E449 /* Animations.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C8A712E324B78A4200C723FE /* ParticularFriend */ = {
