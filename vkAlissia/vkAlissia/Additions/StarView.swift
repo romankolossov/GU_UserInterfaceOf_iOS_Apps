@@ -52,9 +52,10 @@ import UIKit
         let animationGroup = CAAnimationGroup()
         
         animationGroup.duration = 2.2
-        //animationGroup.beginTime = CACurrentMediaTime() + 1
+        animationGroup.beginTime = CACurrentMediaTime() + 0.2
         animationGroup.animations = [strokeStartAnimation, strokeEndAnimation]
         layer.add(animationGroup, forKey: nil)
         
+        configure()
     }
 }

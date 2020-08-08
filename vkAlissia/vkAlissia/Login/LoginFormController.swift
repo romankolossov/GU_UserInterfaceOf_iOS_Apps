@@ -70,13 +70,11 @@ class LoginFormController: UIViewController {
         NSLayoutConstraint.activate(heartLabelAConstraints + heartLabelBConstraints + heartLabelCConstraints
         )
         
-        starView.configure()
-        starView.animate()
-        
         animateHeartBeats()
         animateTitleAppearing()
         animateFieldAppearing()
         animateAuthButton()
+        starView.animate()
     }
     
     override func viewDidLoad() {
