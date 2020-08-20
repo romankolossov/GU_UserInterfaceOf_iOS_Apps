@@ -23,18 +23,11 @@ class MyGroupsViewController: UIViewController {
         tableView.register(UINib(nibName: "MyGroupCell", bundle: Bundle.main), forCellReuseIdentifier: "MyGroupCell")
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        guard let vc = storyboard?.instantiateViewController(identifier: "AllGroupsViewController") as? AllGroupsViewController else { fatalError() }
-        
-        vc.delegate = self
-    }
-    
-    
     @IBAction func addGroupBarButtonItem(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "AllGroupsViewController") as AllGroupsViewController
         
+        vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -54,6 +47,14 @@ extension MyGroupsViewController: UITableViewDataSource {
         cell.myGroupAvatarView.image = group.groupAvatar
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            myGroups.remove(at: indexPath.row)
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
 }
 

@@ -22,6 +22,10 @@ class LoginFormController: UIViewController {
     private let heartLabelB = UILabel()
     private let heartLabelC = UILabel()
     
+    @IBOutlet weak var starView: StarView!
+    
+    var interactiveAnimator: UIViewPropertyAnimator!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -49,7 +53,7 @@ class LoginFormController: UIViewController {
         heartLabelC.translatesAutoresizingMaskIntoConstraints = false
         
         let heartLabelBConstraints = [
-            heartLabelB.topAnchor.constraint(equalTo: titleLabel.bottomAnchor),
+            heartLabelB.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
             heartLabelB.centerXAnchor.constraint(equalTo: titleLabel.centerXAnchor),
         ]
         
@@ -70,6 +74,42 @@ class LoginFormController: UIViewController {
         animateTitleAppearing()
         animateFieldAppearing()
         animateAuthButton()
+        starView.animate()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let recognizer = UIPanGestureRecognizer(target: self, action: #selector(onPan(_:)))
+        view.addGestureRecognizer(recognizer)
+    }
+    
+    @objc func onPan (_ recognizer: UIPanGestureRecognizer) {
+        switch recognizer.state {
+        case .began:
+            interactiveAnimator?.startAnimation()
+            
+            interactiveAnimator = UIViewPropertyAnimator(duration: 0.5,
+                                                         dampingRatio: 0.5,
+                                                         animations: {
+                                                            self.authButton.transform = CGAffineTransform(translationX: 0, y: 150)
+            })
+            
+            interactiveAnimator.pauseAnimation()
+        case .changed:
+            let translation = recognizer.translation(in: view)
+            interactiveAnimator.fractionComplete = translation.y / 100
+        case .ended:
+            interactiveAnimator.stopAnimation(true)
+            
+            interactiveAnimator.addAnimations {
+                self.authButton.transform = .identity
+            }
+            
+            interactiveAnimator.startAnimation()
+        default:
+            return
+        }
     }
     
     @objc func keyboardWillBeShown(notification: Notification) {
@@ -134,40 +174,58 @@ class LoginFormController: UIViewController {
     }
     
     func animateTitleAppearing() {
-        loginLabel.transform = CGAffineTransform(translationX: -view.bounds.width, y: 0)
-        passwordLabel.transform = CGAffineTransform(translationX: view.bounds.width, y: 0)
-        titleLabel.transform = CGAffineTransform(translationX: 0, y: view.bounds.height)
+        let offset = abs (loginLabel.frame.midY - passwordLabel.frame.midY)
         
-        UIView.animate(withDuration: 1,
-                       delay: 0.8,
-                       options: .curveEaseOut,
-                       animations: {
-                        self.loginLabel.transform = .identity
-                        self.passwordLabel.transform = .identity
+        loginLabel.transform = CGAffineTransform(translationX: 0, y: offset)
+        passwordLabel.transform = CGAffineTransform(translationX: 0, y: -offset)
+        titleLabel.transform = CGAffineTransform(translationX: 0, y: -view.bounds.height / 2)
+        
+        UIView.animateKeyframes(withDuration: 1,
+                                delay: 0.3,
+                                options: .calculationModeCubicPaced,
+                                animations: {
+                                    UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5,
+                                                       animations: {
+                                                        self.loginLabel.transform = CGAffineTransform(translationX: 150, y: 50)
+                                                        self.passwordLabel.transform = CGAffineTransform(translationX: -150, y: -50)
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5,
+                                                       animations: {
+                                                        self.loginLabel.transform = .identity
+                                                        self.passwordLabel.transform = .identity
+                                    })
         },
-                       completion: nil)
+                                completion: nil)
         
-        UIView.animate(withDuration: 1.6,
-                       delay: 0.6,
-                       usingSpringWithDamping: 0.6,
-                       initialSpringVelocity: 0,
-                       options: .curveEaseOut,
-                       animations: { self.titleLabel.transform = .identity
-        } ,
-                       completion: nil)
+        let titleAnimator = UIViewPropertyAnimator(duration: 1.6,
+                                                   dampingRatio: 0.5,
+                                                   animations: {
+                                                    self.titleLabel.transform = .identity
+        })
+        
+        titleAnimator.startAnimation(afterDelay: 0.6)
     }
     
     func animateFieldAppearing() {
         let fadeInAnimation = CABasicAnimation(keyPath: "opacity")
         fadeInAnimation.fromValue = 0
         fadeInAnimation.toValue = 1
-        fadeInAnimation.duration = 3
-        fadeInAnimation.beginTime = CACurrentMediaTime() + 1.3
-        fadeInAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
-        fadeInAnimation.fillMode = CAMediaTimingFillMode.backwards
         
-        loginField.layer.add(fadeInAnimation, forKey: nil)
-        passwordField.layer.add(fadeInAnimation, forKey: nil)
+        let scaleAnimation = CASpringAnimation(keyPath: "transform.scale")
+        scaleAnimation.fromValue = 0
+        scaleAnimation.toValue = 1
+        scaleAnimation.stiffness = 200
+        scaleAnimation.mass = 2
+        
+        let animationGroup = CAAnimationGroup()
+        animationGroup.duration = 1.8
+        animationGroup.beginTime = CACurrentMediaTime() + 1
+        animationGroup.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        animationGroup.fillMode = CAMediaTimingFillMode.backwards
+        animationGroup.animations = [fadeInAnimation, scaleAnimation]
+        
+        loginField.layer.add(animationGroup, forKey: nil)
+        passwordField.layer.add(animationGroup, forKey: nil)
     }
     
     func animateAuthButton() {
@@ -176,6 +234,7 @@ class LoginFormController: UIViewController {
         animation.toValue = 1
         animation.stiffness = 200
         animation.mass = 2
+        
         animation.duration = 1.6
         animation.beginTime = CACurrentMediaTime() + 1
         animation.fillMode = CAMediaTimingFillMode.backwards

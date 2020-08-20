@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C806990924DEBE13007CF5FD /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C806990824DEBE13007CF5FD /* StarView.swift */; };
+		C827ED9824D7152900B0E449 /* FriendPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C827ED9724D7152900B0E449 /* FriendPhotoViewController.swift */; };
+		C827ED9A24D7510200B0E449 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C827ED9924D7510200B0E449 /* Animations.swift */; };
 		C83D607124ACDA0400D1DC1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D607024ACDA0400D1DC1C /* AppDelegate.swift */; };
 		C83D607324ACDA0400D1DC1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D607224ACDA0400D1DC1C /* SceneDelegate.swift */; };
 		C83D607824ACDA0400D1DC1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83D607624ACDA0400D1DC1C /* Main.storyboard */; };
@@ -52,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C806990824DEBE13007CF5FD /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
+		C827ED9724D7152900B0E449 /* FriendPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoViewController.swift; sourceTree = "<group>"; };
+		C827ED9924D7510200B0E449 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		C83D606D24ACDA0400D1DC1C /* vkAlissia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vkAlissia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83D607024ACDA0400D1DC1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C83D607224ACDA0400D1DC1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 				C8A712E524B78BA000C723FE /* MyGroups */,
 				C8A712E424B78B7E00C723FE /* AllGroups */,
 				C8EAB0C424C60F070054E37A /* News */,
+				C895663C24DD0673007751A3 /* Additions */,
 				C88E7F8524B7CE91002D72AE /* SupportingFiles */,
 				C83D607E24ACDA0500D1DC1C /* Info.plist */,
 			);
@@ -172,6 +179,15 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		C895663C24DD0673007751A3 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				C827ED9924D7510200B0E449 /* Animations.swift */,
+				C806990824DEBE13007CF5FD /* StarView.swift */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
 		C8A712E324B78A4200C723FE /* ParticularFriend */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +195,7 @@
 				C88E7F8624B94FA4002D72AE /* ParticularFriendCell.swift */,
 				C8B36EA124C2CBD400E59252 /* LikeControl.swift */,
 				C8E65C8824CA773100F2C35F /* FriendLayout.swift */,
+				C827ED9724D7152900B0E449 /* FriendPhotoViewController.swift */,
 			);
 			path = ParticularFriend;
 			sourceTree = "<group>";
@@ -364,13 +381,16 @@
 				C83D60A124ACDAF600D1DC1C /* LoginFormController.swift in Sources */,
 				C88E7F8424B79E91002D72AE /* Group.swift in Sources */,
 				C88E7F7F24B79967002D72AE /* FriendCell.swift in Sources */,
+				C827ED9A24D7510200B0E449 /* Animations.swift in Sources */,
 				C88E7F8724B94FA4002D72AE /* ParticularFriendCell.swift in Sources */,
 				C87F752A24C3EC2A004620E7 /* GroupCell.swift in Sources */,
 				C83D607124ACDA0400D1DC1C /* AppDelegate.swift in Sources */,
 				C8EAB0C124C46F1E0054E37A /* MyGroupCell.swift in Sources */,
 				C83D607324ACDA0400D1DC1C /* SceneDelegate.swift in Sources */,
+				C806990924DEBE13007CF5FD /* StarView.swift in Sources */,
 				C8B36EA224C2CBD400E59252 /* LikeControl.swift in Sources */,
 				C88E7F8224B79E61002D72AE /* Friend.swift in Sources */,
+				C827ED9824D7152900B0E449 /* FriendPhotoViewController.swift in Sources */,
 				C8A712E924B78E6F00C723FE /* MyGroupsViewController.swift in Sources */,
 				C8EAB0CB24C6102F0054E37A /* NewsCell.swift in Sources */,
 				C8A712EE24B790A200C723FE /* FriendsViewController.swift in Sources */,

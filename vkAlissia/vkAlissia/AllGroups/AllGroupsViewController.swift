@@ -92,8 +92,9 @@ extension AllGroupsViewController: UITableViewDataSource {
 extension AllGroupsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard  let group = sections[sectionTitles[indexPath.section]]? [indexPath.row] else { fatalError() }
-
+        
         delegate?.addFavoriteGroup(group)
+        
+        navigationController?.popViewController(animated: true)
     }
-    
 }
